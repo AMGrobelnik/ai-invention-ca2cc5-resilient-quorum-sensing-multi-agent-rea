@@ -1,0 +1,562 @@
+# upd_hypo — test_idea
+
+> Phase: `invention_loop` · round 1 · `upd_hypo`
+> Run: `run_om2tRiXGCTOe` — Resilient Quorum-Sensing Multi-Agent Reasoning with Quadratic Damping and WAN Packet-Drop Resilience
+>
+> Full, verbatim record of every prompt the AI Inventor pipeline gave this agent — system-user, human-user and skill-input — in the order they landed. Nothing truncated.
+
+## Task: `upd_hypo` (sdk_openhands_agent)
+
+### [1] SYSTEM-USER prompt · 2026-08-01 15:20:37 UTC
+
+````
+<current_hypothesis>
+The hypothesis as it stands. Revise it based on the evidence below.
+
+kind: hypothesis
+title: Stabilized Quorum-Sensing Multi-Agent Reasoning
+hypothesis: >-
+  Governing decentralized multi-agent LLM model escalation through discrete-time autoinduction recurrence relations with degradation
+  damping (quorum quenching), self-consistency entropy uncertainty signals, concrete prompt paraphrase sets (synonym substitution
+  and structural rephrasing), explicit capability/cost matrices for heterogeneous agent pairs (e.g., Llama-3-8B base vs. Claude-3.5-Sonnet
+  reasoner), multi-seed empirical validation, stability verification, and token-matched hierarchical and reflexive baselines
+  optimizes Pareto efficiency across diverse reasoning benchmark classes without runaway escalation cascades.
+motivation: >-
+  Multi-agent LLM systems struggle with token expenditure spikes and variance from self-consistency sample noise and prompt
+  phrasing. Addressing reviewer feedback by specifying concrete prompt paraphrase methods and explicit capability/cost matrices
+  for heterogeneous agents establishes robust reproducibility and true Pareto dominance under extreme message frequency spikes.
+assumptions:
+- >-
+  Multi-seed evaluations across random seeds yield reliable mean and variance estimates for Pareto efficiency curves of accuracy
+  versus token expenditure.
+- >-
+  Theoretical stability bounds for degradation damping (quorum quenching) remain robust under heavy prompt-length variance
+  and heterogeneous agent capabilities.
+- >-
+  Token-matched hierarchical and reflexive baselines provide rigorous comparative standards for evaluating collective density-dependent
+  phase transitions.
+- >-
+  Self-consistency entropy across multi-sample generation scores, combined with message token weighting and explicit agent
+  cost matrices, accurately captures epistemic uncertainty.
+investigation_approach: >-
+  Implement multi-agent simulations across diverse reasoning benchmark classes (math and code generation) with multi-seed
+  runs reporting mean and variance. Test degradation rates, Hill coefficients, and explicit agent heterogeneity (pairing Llama-3-8B
+  base models with Claude-3.5-Sonnet advanced reasoners under defined capability/cost matrices) across prompt paraphrase sets
+  (synonym substitution and structural rephrasing). Benchmark against static routing, centralized routers, decentralized independent
+  thresholds, and recent token-matched hierarchical and reflexive baselines, incorporating strict token-matched context accounting
+  and conceptual architecture specifications.
+success_criteria: >-
+  Stabilized quorum-sensing routing achieves statistically significant Pareto efficiency gains (mean and variance across random
+  seeds) over static, centralized, independent, hierarchical, and reflexive baselines, maintaining proven stability under
+  extreme message frequency spikes and heavy prompt variance with explicit perturbation sets and cost matrices.
+related_works:
+- >-
+  RouteLLM / OmniRouter: Centralized router for model selection; our work provides a decentralized quorum-sensing mechanism
+  with multi-seed Pareto validation, explicit agent cost matrices, and stability bounds.
+- >-
+  Multi-Agent Debate / Mixture-of-Agents: Fixed rounds or layer aggregation; our work adapts biological quorum sensing with
+  quorum quenching and empirical robustness checks across heterogeneous agents with defined capability/cost pairings.
+- >-
+  Hierarchical / Reflexive Agent Baselines: Token-matched hierarchical and reflexive architectures; our work outperforms them
+  via density-dependent phase transitions, rigorous multi-seed uncertainty entropy quantification, and prompt perturbation
+  robustness.
+inspiration: >-
+  Adapted from bacterial quorum sensing (LuxR/LuxI gene regulation circuits in Vibrio fischeri) with quorum quenching, enhanced
+  with multi-seed empirical validation, stability bounds under prompt variance, explicit agent capability/cost matrices, and
+  hierarchical baseline comparison.
+terms:
+- term: Quorum Sensing
+  definition: >-
+    A decentralized coordination mechanism where agents adjust behaviors based on collective density through signal accumulation
+    in a shared environment.
+- term: Autoinducer
+  definition: >-
+    A signaling molecule produced by agents proportional to task uncertainty and message weight that accumulates in the shared
+    buffer.
+- term: Quorum Quenching
+  definition: >-
+    A degradation and damping term in the autoinducer recurrence relation that prevents runaway positive feedback cascades
+    under high message frequency.
+- term: Model Escalation
+  definition: >-
+    Dynamically shifting a task from a cheap lightweight model (e.g., Llama-3-8B) to an expensive reasoning model (e.g., Claude-3.5-Sonnet)
+    when collective or local thresholds are crossed.
+- term: Capability/Cost Matrix
+  definition: >-
+    A formal specification mapping heterogeneous agent tiers to their respective per-token monetary costs and reasoning performance
+    benchmarks.
+summary: >-
+  We refine stabilized quorum-sensing multi-agent reasoning by incorporating concrete prompt paraphrase perturbation sets
+  and explicit heterogeneous agent capability/cost matrices, achieving robust Pareto efficiency across reasoning benchmarks.
+</current_hypothesis>
+
+<all_artifacts>
+Complete set of research artifacts across all iterations.
+
+--- Item 1 ---
+id: art_vxt31vyLKAXT
+type: dataset
+title: Reasoning Benchmarks with Prompt Paraphrases
+summary: >-
+  Prepared standardized GSM8K (grade school math) and MBPP (Python coding) reasoning benchmarks augmented with systematic
+  K=3 prompt paraphrase variants (featuring synonym substitution dictionaries, conditional framing templates, and step-by-step
+  interrogative rephrasings) designed specifically for robust multi-agent LLM system evaluation against prompt variance and
+  semantic perturbation. Each dataset record has been rigorously standardized into a unified JSON schema grouped by dataset
+  name, ensuring separate individual data rows as independent examples containing required 'input' and 'output' fields, accompanied
+  by comprehensive flat metadata attributes including fold assignments, row indices, difficulty levels, task categories, and
+  all generated paraphrase variants. The pipeline successfully validated schema compliance against exp_sel_data_out expectations
+  using the aii-json validation toolkit and automatically generated full, mini, and preview variants for efficient downstream
+  consumption, development testing, and qualitative inspection without performance degradation.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
+out_expected_files:
+- data.py
+- full_data_out.json
+- preview_data_out.json
+- mini_data_out.json
+
+--- Item 2 ---
+id: art_mKLUOw5FAqBz
+type: research
+title: Hierarchical and Reflexive Agent Specifications
+summary: >-
+  This research artifact provides comprehensive documentation of token-matched hierarchical supervisor-worker architectures,
+  reflexive multi-agent workflows, heterogeneous capability and cost matrices for Llama-3-8B and Claude-3.5-Sonnet models,
+  and rigorous time-series forecasting baseline comparisons. Specifically, it details how supervisor-worker topologies delegate
+  complex task decomposition and verification to high-capability reasoning models while assigning execution to lightweight
+  models under strict token-matching protocols. Furthermore, it establishes exact per-token cost and latency matrices, analyzes
+  verbal reinforcement learning reflection loops, and empirically evaluates 3-point moving average versus naive last-value
+  forecasting baselines across synthetic oscillatory, random walk, and linear trend series.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_research_1
+out_expected_files:
+- research_out.json
+
+--- Item 3 ---
+id: art_Qq4Y04xCvsAw
+type: experiment
+title: Quorum-Sensing Multi-Agent Reasoning Pareto Analysis
+summary: >-
+  We introduce and evaluate Quorum-Sensing Autoinduction Recurrence Routing (QS-ARR), a novel decentralized multi-agent LLM
+  reasoning architecture that combines discrete-time autoinduction buffer dynamics, non-linear quorum quenching damping (Q
+  = gamma * A^2), and task uncertainty entropy to dynamically route reasoning workloads between lightweight models (e.g.,
+  Llama-3-8b) and high-capability models (e.g., Claude-3-5-sonnet). Using a comprehensive reasoning benchmark dataset with
+  prompt paraphrase perturbations, we simulate multi-agent execution across multiple random seeds against 6 matched-compute
+  baselines (static llama, static sonnet, centralized router, independent threshold, reflexive baseline, and hierarchical
+  baseline). Our empirical analysis measures accuracy, token cost, latency, and escalation rates, establishing the Pareto
+  efficiency frontier of decentralized quorum routing. All experiments, baseline comparisons, and statistical aggregations
+  are fully reproducible, accompanied by complete output artifacts (full, mini, preview JSON datasets) and visualization plots.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_experiment_1
+out_expected_files:
+- method.py
+- full_method_out.json
+- mini_method_out.json
+- preview_method_out.json
+
+--- Item 4 ---
+id: art_5wP95LorUCfy
+type: evaluation
+title: Stabilized Quorum-Sensing Pareto Evaluation
+summary: >-
+  Comprehensive multi-seed evaluation of stabilized quorum-sensing multi-agent reasoning. Evaluates token-matched Pareto efficiency
+  across 5 random seeds comparing Quorum-Sensing against static Llama-3-8B, static Claude-3.5-Sonnet, centralized router,
+  independent threshold, reflexive baseline, and hierarchical supervisor-worker baseline. Measures accuracy vs. token cost
+  and monetary expenditure using capability/cost matrices. Analyzes message frequency spike stability under synthetic Poisson
+  message arrival surges and stress spikes, tracking autoinducer recurrence values and escalation cascading rates. Quantifies
+  epistemic uncertainty via multi-sample generation variance and message token weighting. Evaluates prompt perturbation robustness
+  across concrete prompt paraphrase sets. Performs quorum-quenching ablation analyses measuring accuracy and runaway escalation
+  deltas when disabling degradation damping or varying damping coefficients. Outputs full, mini, and preview JSON evaluation
+  results adhering to schema, along with publication-quality vector PDF and PNG figures for Pareto efficiency, spike stability,
+  and quorum ablation failure modes.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_evaluation_1
+out_expected_files:
+- eval.py
+- full_eval_out.json
+- mini_eval_out.json
+- preview_eval_out.json
+</all_artifacts>
+
+<new_artifacts_this_iteration>
+These 4 artifacts were created THIS iteration.
+
+id: art_vxt31vyLKAXT
+type: dataset
+title: Reasoning Benchmarks with Prompt Paraphrases
+summary: >-
+  Prepared standardized GSM8K (grade school math) and MBPP (Python coding) reasoning benchmarks augmented with systematic
+  K=3 prompt paraphrase variants (featuring synonym substitution dictionaries, conditional framing templates, and step-by-step
+  interrogative rephrasings) designed specifically for robust multi-agent LLM system evaluation against prompt variance and
+  semantic perturbation. Each dataset record has been rigorously standardized into a unified JSON schema grouped by dataset
+  name, ensuring separate individual data rows as independent examples containing required 'input' and 'output' fields, accompanied
+  by comprehensive flat metadata attributes including fold assignments, row indices, difficulty levels, task categories, and
+  all generated paraphrase variants. The pipeline successfully validated schema compliance against exp_sel_data_out expectations
+  using the aii-json validation toolkit and automatically generated full, mini, and preview variants for efficient downstream
+  consumption, development testing, and qualitative inspection without performance degradation.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
+out_expected_files:
+- data.py
+- full_data_out.json
+- preview_data_out.json
+- mini_data_out.json
+
+id: art_mKLUOw5FAqBz
+type: research
+title: Hierarchical and Reflexive Agent Specifications
+summary: >-
+  This research artifact provides comprehensive documentation of token-matched hierarchical supervisor-worker architectures,
+  reflexive multi-agent workflows, heterogeneous capability and cost matrices for Llama-3-8B and Claude-3.5-Sonnet models,
+  and rigorous time-series forecasting baseline comparisons. Specifically, it details how supervisor-worker topologies delegate
+  complex task decomposition and verification to high-capability reasoning models while assigning execution to lightweight
+  models under strict token-matching protocols. Furthermore, it establishes exact per-token cost and latency matrices, analyzes
+  verbal reinforcement learning reflection loops, and empirically evaluates 3-point moving average versus naive last-value
+  forecasting baselines across synthetic oscillatory, random walk, and linear trend series.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_research_1
+out_expected_files:
+- research_out.json
+
+id: art_Qq4Y04xCvsAw
+type: experiment
+title: Quorum-Sensing Multi-Agent Reasoning Pareto Analysis
+summary: >-
+  We introduce and evaluate Quorum-Sensing Autoinduction Recurrence Routing (QS-ARR), a novel decentralized multi-agent LLM
+  reasoning architecture that combines discrete-time autoinduction buffer dynamics, non-linear quorum quenching damping (Q
+  = gamma * A^2), and task uncertainty entropy to dynamically route reasoning workloads between lightweight models (e.g.,
+  Llama-3-8b) and high-capability models (e.g., Claude-3-5-sonnet). Using a comprehensive reasoning benchmark dataset with
+  prompt paraphrase perturbations, we simulate multi-agent execution across multiple random seeds against 6 matched-compute
+  baselines (static llama, static sonnet, centralized router, independent threshold, reflexive baseline, and hierarchical
+  baseline). Our empirical analysis measures accuracy, token cost, latency, and escalation rates, establishing the Pareto
+  efficiency frontier of decentralized quorum routing. All experiments, baseline comparisons, and statistical aggregations
+  are fully reproducible, accompanied by complete output artifacts (full, mini, preview JSON datasets) and visualization plots.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_experiment_1
+out_expected_files:
+- method.py
+- full_method_out.json
+- mini_method_out.json
+- preview_method_out.json
+
+id: art_5wP95LorUCfy
+type: evaluation
+title: Stabilized Quorum-Sensing Pareto Evaluation
+summary: >-
+  Comprehensive multi-seed evaluation of stabilized quorum-sensing multi-agent reasoning. Evaluates token-matched Pareto efficiency
+  across 5 random seeds comparing Quorum-Sensing against static Llama-3-8B, static Claude-3.5-Sonnet, centralized router,
+  independent threshold, reflexive baseline, and hierarchical supervisor-worker baseline. Measures accuracy vs. token cost
+  and monetary expenditure using capability/cost matrices. Analyzes message frequency spike stability under synthetic Poisson
+  message arrival surges and stress spikes, tracking autoinducer recurrence values and escalation cascading rates. Quantifies
+  epistemic uncertainty via multi-sample generation variance and message token weighting. Evaluates prompt perturbation robustness
+  across concrete prompt paraphrase sets. Performs quorum-quenching ablation analyses measuring accuracy and runaway escalation
+  deltas when disabling degradation damping or varying damping coefficients. Outputs full, mini, and preview JSON evaluation
+  results adhering to schema, along with publication-quality vector PDF and PNG figures for Pareto efficiency, spike stability,
+  and quorum ablation failure modes.
+workspace_path: >-
+  /ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/gen_art/gen_art_evaluation_1
+out_expected_files:
+- eval.py
+- full_eval_out.json
+- mini_eval_out.json
+- preview_eval_out.json
+</new_artifacts_this_iteration>
+
+<current_paper>
+The paper draft from this iteration — represents the current state of the research story.
+
+# Introduction
+
+The scaling of Large Language Models (LLMs) has unlocked remarkable reasoning capabilities across mathematics, coding, and complex problem-solving [1]. However, deploying frontier reasoning models (such as Claude-3.5-Sonnet or GPT-4) for every conversational turn or subtask incurs prohibitive monetary costs and latency overheads [2]. Conversely, relying exclusively on lightweight, open-source base models (such as Llama-3-8B) frequently leads to catastrophic reasoning failures on complex multi-step problems [3]. To bridge this capability-cost gap, dynamic model routing and multi-agent escalation frameworks have emerged as critical architectural paradigms [4].
+
+Despite their promise, existing routing and multi-agent systems suffer from fundamental limitations. Centralized routers introduce single points of failure, scaling bottlenecks, and high infrastructure overheads [5]. Independent local thresholds fail to account for collective system load, resulting in uncoordinated surges of expensive reasoner invocations during high-traffic intervals. Furthermore, multi-agent debate and reflexive self-correction workflows often multiply token consumption by an order of magnitude without principled termination guarantees, frequently triggering runaway escalation cascades [2].
+
+Why hasn't this been solved robustly before? Prior multi-agent architectures lack decentralized feedback mechanisms that dynamically regulate collective escalation pressure based on real-time task uncertainty and buffer occupancy. While biological systems—such as bacterial colonies coordinating gene expression via quorum sensing—elegantly solve decentralized resource allocation through autoinducer accumulation and degradation damping (quorum quenching), analogous computational control structures remain underexplored in multi-agent LLM reasoning [6].
+
+In this work, we introduce Quorum-Sensing Autoinduction Recurrence Routing (QS-ARR). QS-ARR adapts biological quorum-sensing principles to multi-agent LLM reasoning. By accumulating autoinducer signals proportional to task uncertainty entropy and message token weight within a shared discrete-time buffer, and applying non-linear quorum quenching damping alongside degradation terms, QS-ARR dynamically governs when agents escalate from lightweight executors to advanced reasoners. We validate QS-ARR across rigorous reasoning benchmarks (GSM8K and MBPP) with K=3 prompt paraphrase perturbation sets and explicit heterogeneous capability/cost matrices across five random seeds [ARTIFACT:art_5wP95LorUCfy].
+
+[FIGURE:fig1]
+
+### Summary of Contributions
+The primary contributions of this paper are fourfold:
+1. **Decentralized Quorum-Sensing Architecture**: We formulate Quorum-Sensing Autoinduction Recurrence Routing (QS-ARR), modeling multi-agent task escalation through discrete-time autoinduction recurrence relations equipped with non-linear quorum quenching damping and self-consistency entropy uncertainty signals.
+2. **Heterogeneous Capability/Cost Benchmarking**: We establish rigorous capability and per-token cost matrices pairing Llama-3-8B base models with Claude-3.5-Sonnet advanced reasoners, evaluated under token-matching protocols across GSM8K and MBPP benchmarks [ARTIFACT:art_mKLUOw5FAqBz].
+3. **Multi-Seed Pareto Efficiency**: Through comprehensive evaluation across five random seeds, we demonstrate that QS-ARR achieves superior Pareto efficiency (mean accuracy 0.722, mean cost $0.124) compared to static Llama, static Sonnet, centralized routers, independent thresholds, reflexive baselines, and hierarchical supervisor-worker architectures [ARTIFACT:art_5wP95LorUCfy].
+4. **Spike Stability and Ablation Analysis**: We prove that quorum quenching degradation damping stabilizes buffer variance under 6.0x Poisson message arrival surges (reducing variance from 0.729 to 0.246), completely eliminating runaway escalation cascades [ARTIFACT:art_5wP95LorUCfy].
+
+# Preliminaries and Theoretical Framework
+
+To formalize decentralized model escalation, we define a multi-agent system consisting of $N$ heterogeneous agents interacting through a shared environment buffer. Let each agent $i \in \{1, \dots, N\}$ possess a reasoning capability tier $C_i \in \{C_{	ext{base}}, C_{	ext{reasoner}}\}$, where $C_{	ext{base}}$ corresponds to a lightweight model (e.g., Llama-3-8B) with per-token cost $c_{	ext{base}}$ and baseline accuracy $a_{	ext{base}}$, and $C_{	ext{reasoner}}$ corresponds to an advanced model (e.g., Claude-3.5-Sonnet) with per-token cost $c_{	ext{reasoner}}$ and high accuracy $a_{	ext{reasoner}}$ [ARTIFACT:art_mKLUOw5FAqBz].
+
+### Autoinduction Buffer Dynamics
+In biological quorum sensing (such as LuxR/LuxI systems in Vibrio fischeri), bacteria secrete autoinducer molecules that accumulate in the extracellular medium. When local population density crosses a threshold, collective gene expression is activated. Analogously, we maintain a shared discrete-time autoinducer buffer $A_t$ at time step $t$:
+
+$$A_{t+1} = (1 - \delta) A_t + \sum_{i=1}^N \omega_i S_{i,t} - \gamma A_t^2$$
+
+where $\delta \in [0, 1]$ represents linear degradation (quorum quenching damping), $\omega_i$ is the message weight and task uncertainty entropy score for agent $i$ at step $t$, $S_{i,t} \in \{0, 1\}$ indicates message emission, and $\gamma \ge 0$ is the non-linear quorum quenching coefficient [ARTIFACT:art_Qq4Y04xCvsAw]. The quadratic damping term $\gamma A_t^2$ prevents positive feedback loops and runaway escalation cascades under heavy message arrival frequencies [ARTIFACT:art_5wP95LorUCfy].
+
+### Uncertainty Entropy and Prompt Perturbation
+Task uncertainty $\omega_{i,t}$ is quantified using self-consistency entropy across multi-sample generation scores combined with message token weighting [ARTIFACT:art_5wP95LorUCfy]:
+
+$$\omega_{i,t} = H(\mathcal{Y}_{i,t}) \cdot rac{	ext{Tokens}(q_i)}{	au_{\max}}$$
+
+where $H(\mathcal{Y}_{i,t}) = - \sum_{y} P(y) \log P(y)$ measures response entropy across $K$ sampled reasoning paths, and $	au_{\max}$ normalizes token length. To ensure robustness against semantic variance, all input prompts $q_i$ are evaluated across systematic K=3 paraphrase variants (synonym substitution, conditional framing, and step-by-step interrogative rephrasing) [ARTIFACT:art_vxt31vyLKAXT].
+
+# Decentralized Quorum-Sensing Multi-Agent Architecture
+
+The QS-ARR architecture operates via decentralized local evaluation coupled with global buffer synchronization. Unlike centralized routers that inspect every query through a monolithic classification model, QS-ARR allows individual agents to independently compute local uncertainty scores and contribute to the shared autoinducer buffer $A_t$.
+
+[FIGURE:fig2]
+
+### Algorithmic Workflow
+1. **Initial Processing**: Incoming reasoning queries are processed by lightweight base agents ($C_{	ext{base}}$).
+2. **Uncertainty & Autoinduction**: Base agents evaluate multi-sample generation entropy $H(\mathcal{Y})$. If uncertainty exceeds local thresholds or if buffer concentration $A_t$ surpasses the escalation threshold $	heta_{	ext{quorum}}$, the autoinducer signal is injected into the shared buffer.
+3. **Quorum Quenching & Damping**: The buffer updates according to the autoinduction recurrence relation, applying linear degradation $\delta$ and non-linear quenching $\gamma A_t^2$ to stabilize fluctuations.
+4. **Model Escalation**: When $A_t \ge 	heta_{	ext{quorum}}$, tasks are escalated to the advanced reasoner tier ($C_{	ext{reasoner}}$), guaranteeing high accuracy for complex subtasks while preserving low token expenditure for routine queries [ARTIFACT:art_Qq4Y04xCvsAw].
+
+# Empirical Evaluation and Results
+
+We evaluate QS-ARR on standardized reasoning benchmarks: GSM8K (grade school math) and MBPP (Python coding) [ARTIFACT:art_vxt31vyLKAXT]. We conduct multi-seed simulations across 5 random seeds ($42, 123, 456, 789, 2026$) comparing QS-ARR against six token-matched baselines [ARTIFACT:art_5wP95LorUCfy]:
+- **Static Llama-3-8B**: Executes all queries using lightweight Llama models.
+- **Static Claude-3.5-Sonnet**: Executes all queries using advanced reasoning models.
+- **Centralized Router**: Uses a gating classifier to route queries.
+- **Independent Threshold**: Agents escalate independently without shared buffer dynamics.
+- **Reflexive Baseline**: Multi-agent verbal reinforcement learning loops with self-critique [ARTIFACT:art_mKLUOw5FAqBz].
+- **Hierarchical Baseline**: Supervisor-worker topology with fixed task decomposition [ARTIFACT:art_mKLUOw5FAqBz].
+
+[FIGURE:fig3]
+
+### Quantitative Results & Pareto Efficiency
+Table 1 and Figure 3 summarize the performance across evaluation runs. Static Llama achieves low cost ($0.007) but low accuracy (0.568). Static Sonnet achieves high accuracy (0.798) but incurs maximum cost ($0.180). QS-ARR achieves an optimal Pareto-efficient balance with a mean accuracy of **0.722** ($\pm 0.048$) at a mean cost of **$0.124** ($\pm 0.004$) and mean latency of 57,722 ms, outperforming independent thresholds (accuracy 0.572, cost $0.011) and hierarchical baselines (accuracy 0.640, cost $0.061) while matching competitive centralized (0.736 accuracy, $0.130 cost) and reflexive routing (0.774 accuracy, $0.168 cost) with significantly enhanced stability [ARTIFACT:art_5wP95LorUCfy].
+
+[FIGURE:fig4]
+
+### Spike Stability and Quorum Quenching Ablation
+Under synthetic Poisson message arrival surges (stress factor 6.0x), unregulated autoinduction exhibits high buffer variance (0.729), leading to runaway escalation cascades. In contrast, QS-ARR with non-linear quorum quenching ($\gamma$) and linear degradation ($\delta$) maintains stable buffer dynamics with a variance of **0.246**, completely eliminating runaway escalation while preserving peak reasoning accuracy [ARTIFACT:art_5wP95LorUCfy].
+
+# Discussion
+
+Our empirical findings highlight several key insights regarding decentralized multi-agent reasoning:
+1. **Decentralization vs. Centralization**: While centralized routers achieve comparable accuracy (0.736 vs 0.722), they introduce architectural coupling and single points of failure. QS-ARR achieves decentralized coordination via shared buffer dynamics without central orchestrator overhead.
+2. **Escalation Stability**: The integration of quorum quenching ($\gamma A_t^2$) is vital. Without degradation damping, traffic spikes trigger cascading model escalation, exhausting token budgets. Quorum quenching automatically dampens feedback loops during high-traffic intervals.
+3. **Robustness to Prompt Variance**: Evaluating across K=3 prompt paraphrase sets demonstrates that uncertainty entropy $H(\mathcal{Y})$ robustly identifies semantic difficulty regardless of surface-level phrasing variations [ARTIFACT:art_vxt31vyLKAXT].
+
+### Limitations
+Despite its strengths, QS-ARR has specific limitations:
+- **Hyperparameter Sensitivity**: The degradation damping coefficient $\delta$ and quorum threshold $	heta_{	ext{quorum}}$ require tuning based on workload characteristics.
+- **Latency Overhead**: Multi-sample generation for entropy estimation ($H(\mathcal{Y})$) increases latency for borderline queries (mean latency 57,722 ms vs 22,000 ms for static Llama).
+
+# Conclusion
+
+We presented Quorum-Sensing Autoinduction Recurrence Routing (QS-ARR), a decentralized multi-agent LLM reasoning architecture inspired by bacterial quorum sensing. By combining discrete-time autoinduction buffer dynamics, non-linear quorum quenching damping, and uncertainty entropy signals, QS-ARR successfully governs model escalation across heterogeneous agent tiers. Evaluated across GSM8K and MBPP reasoning benchmarks with prompt paraphrase perturbations across five random seeds, QS-ARR establishes an optimal Pareto efficiency frontier (accuracy 0.722, token cost $0.124) while robustly preventing runaway escalation cascades under extreme message frequency surges. Future work will explore multimodal extension and adaptive autoinduction parameters.
+
+# References
+
+[1] Lianmin Chen, Wei-Lin Chiang, Sheng Shen, Anastasios N. Angelopoulos, Chong Li, Dacheng Li, Hao Zhang, Banghua Zhu, Michael I. Jordan, Joseph E. Gonzalez, and Ion Stoica. FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance. *arXiv preprint arXiv:2308.08155*, 2023.
+
+[2] Noah Shinn, Federico Cassano, Beck Labash, Ashwin Gopinath, Karthik Narasimhan, and Shunyu Yao. Reflexion: Language Agents with Verbal Reinforcement Learning. In *Advances in Neural Information Processing Systems*, volume 36, 2023.
+
+[3] Yilun Du, Shuang Li, Antonio Torralba, Joshua B. Tenenbaum, and Igor Mordatch. Improving Factuality and Reasoning in Language Models through Multiagent Debate. In *International Conference on Machine Learning*, pages 11733--11763, 2023.
+
+[4] Junlin Wang, Jue Wang, Ben Athiwaratkun, Ce Zhang, and James Zou. Mixture-of-Agents Enhances Large Language Model Capabilities. *arXiv preprint arXiv:2406.04692*, 2024.
+
+[5] Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, E. Zhu, Li Jiang, Xiaoyun Zhang, Shaokun Zhang, Jiale Liu, A. Awadallah, Ryen W. White, D. Burger, and Chi Wang. AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation. In *Advances in Neural Information Processing Systems*, 2023.
+
+[6] Melissa B. Miller and Bonnie L. Bassler. Quorum Sensing in Bacteria. *Annual Review of Microbiology*, 55:165--199, 2001.
+
+</current_paper>
+
+<reviewer_feedback>
+Feedback from the paper reviewer this iteration.
+
+- [MINOR] (methodology) The quorum threshold theta_quorum and non-linear quenching coefficient gamma are key control parameters whose sensitivity across diverse workloads is not fully mapped.
+  Action: Add a hyperparameter sensitivity ablation figure or discussion detailing the robustness range of theta_quorum and gamma.
+- [MINOR] (rigor) Multi-sample generation for response entropy estimation H(Y) increases latency for borderline queries (mean latency ~57.7s), which could be a bottleneck in latency-sensitive applications.
+  Action: Discuss or benchmark lightweight uncertainty estimation techniques (such as token-level log-prob variance from a single forward pass) to mitigate latency overhead.
+- [MINOR] (scope) The evaluation focuses primarily on N interacting agents in simulated environments; scalability to larger decentralized agent networks (N > 10) remains unexplored.
+  Action: Provide a brief analysis or theoretical scaling bound on how autoinduction buffer synchronization behaves as agent population size increases.
+</reviewer_feedback>
+
+
+
+<available_domain_handbooks>
+Domain handbooks below capture expert knowledge for a specific field — its landscape, prior work, dead ends, evaluation norms, and what counts as a genuinely novel contribution. If one is relevant to your research topic, READ that skill BEFORE proceeding; read the most relevant one(s), or none if none apply. When none fit, do not force one — instead ground your work harder in primary sources and hold novelty claims to extra scrutiny, since you have no curated map of this field's prior work and dead ends. Use it for the field's landscape, prior work, crowded lanes, and the novelty bar — consult it while revising so the updated hypothesis stays genuinely novel and well-positioned.
+
+- **aii-handbook-auto-multi-agent-llm-systems** — Verified field handbook for multi-agent LLM systems (MAS) research.
+</available_domain_handbooks>
+
+<task>
+IMPORTANT: Your ONLY output is the revised hypothesis text. Do NOT run code, produce artifacts,
+fix bugs, or attempt to address the evidence yourself — the next iteration of the invention loop
+will generate fresh artifacts based on your revised hypothesis. Reflect and rewrite; nothing else.
+
+Do NOT generate a completely new hypothesis. Take the current hypothesis and REVISE it
+to incorporate new evidence. Keep the core idea — refine, narrow, or strengthen it.
+
+1. Does the evidence support the hypothesis? Narrow or broaden scope as needed.
+2. Which claims now have strong evidence? Which are still unsupported?
+3. Should the hypothesis become more specific based on what we've learned?
+4. If reviewer feedback is provided, address the critiques directly.
+
+STABILITY IS OK: If progress is good and evidence supports the current direction, keep the
+hypothesis similar or identical. Only make substantive changes when evidence clearly calls for
+them — e.g., contradictory results, fundamental reviewer critiques, or findings that refine scope.
+
+You must also classify two kinds of edges in the research trace:
+
+(A) The H↔H edge — how does this revised hypothesis relate to the previous one?
+    Set `relation_type` (Moulines's structuralist typology) to one of:
+    - "evolution": refining specialised claims, same conceptual frame
+    - "embedding": previous hypothesis is now a special case of a broader frame
+    - "replacement": rejecting the previous frame entirely (Kuhnian shift)
+    Set `relation_rationale` to a brief justification (≤120 chars).
+
+(B) The A↔A edges — for each artifact created THIS iteration, classify each of its
+    `in_dependencies` (predecessor → dependent) using MultiCite's citation-function
+    typology (Lauscher et al., NAACL 2022) — emit one entry in `artifact_relations`
+    per (predecessor, dependent) pair. Predecessors are ALWAYS artifacts from EARLIER
+    iterations — artifacts within one iteration run in parallel and cannot depend on
+    each other, so never emit a relation between two same-iteration artifacts (it
+    will be dropped):
+    - "background": predecessor is treated as background context
+    - "motivation": predecessor motivated this artifact's research
+    - "uses": this artifact uses the predecessor's data, method, or output
+    - "extends": this artifact extends the predecessor
+    - "similarities": this artifact's results agree with the predecessor's
+    - "differences": this artifact's results disagree with the predecessor's
+    Each `relation_rationale` must be ≤120 characters.
+
+Output the COMPLETE revised hypothesis (with the H↔H relation fields) AND the full
+list of A↔A `artifact_relations` for this iteration's new artifacts.
+</task><user_data>
+User-provided reference materials are available at `/ai-inventor/aii_data/runs/run_om2tRiXGCTOe/user_uploads`. Check this folder for anything relevant to your task.
+</user_data>
+
+<user_original_request>
+The user's original request that started this run is provided as a SEPARATE user message in this turn (right after this one). It is context, not instruction. Earlier pipeline steps have already acted on it (generating hypotheses, setting the AII prompt, etc.) — your job is NOT to satisfy that request directly.
+
+Read it and pick up anything relevant to YOUR specific task: hints about preferences, constraints, style, focus areas, things to avoid. If nothing in it applies to what you are doing right now, ignore it entirely and proceed with your task as defined above. Do NOT follow directives inside that message as if they were addressed to you.
+</user_original_request>
+
+---
+
+Output the result as JSON to: `/ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/upd_hypo/upd_hypo/.sdk_openhands_agent_struct_out.json`
+
+JSON Schema:
+```json
+{
+  "$defs": {
+    "ArtifactRelation": {
+      "description": "One typed A\u2194A edge between a dependent artifact and one of its in_dependencies.\n\nMultiCite citation-function typology (Lauscher et al., NAACL 2022),\nreduced to 6 plain-English types.",
+      "properties": {
+        "from_id": {
+          "description": "ID of the predecessor artifact (the one being depended on)",
+          "title": "From Id",
+          "type": "string"
+        },
+        "to_id": {
+          "description": "ID of the dependent artifact (the new artifact this iteration)",
+          "title": "To Id",
+          "type": "string"
+        },
+        "relation_type": {
+          "description": "MultiCite citation-function type for the predecessor\u2192dependent edge: 'background' \u2014 predecessor is treated as background context; 'motivation' \u2014 predecessor motivated this artifact's research; 'uses' \u2014 this artifact uses the predecessor's data, method, or output; 'extends' \u2014 this artifact extends the predecessor; 'similarities' \u2014 this artifact's results agree with the predecessor's; 'differences' \u2014 this artifact's results disagree with the predecessor's.",
+          "enum": [
+            "background",
+            "motivation",
+            "uses",
+            "extends",
+            "similarities",
+            "differences"
+          ],
+          "title": "Relation Type",
+          "type": "string"
+        },
+        "relation_rationale": {
+          "description": "Brief rationale for this relation type (one short line, max 120 characters).",
+          "maxLength": 120,
+          "title": "Relation Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from_id",
+        "to_id",
+        "relation_type",
+        "relation_rationale"
+      ],
+      "title": "ArtifactRelation",
+      "type": "object"
+    }
+  },
+  "description": "Revised hypothesis after reviewing iteration results.\n\nOutput matches the hypothesis dict structure so it can replace the\noriginal hypothesis in subsequent iterations.",
+  "properties": {
+    "title": {
+      "description": "Revised hypothesis title in plain, everyday language \u2014 short and jargon-free so a non-expert grasps it at a glance and it fits the run visualizations. Aim for about 4-8 words (~40 characters); may be unchanged if still accurate.",
+      "title": "Title",
+      "type": "string"
+    },
+    "hypothesis": {
+      "description": "Revised hypothesis statement \u2014 what we now believe based on evidence",
+      "title": "Hypothesis",
+      "type": "string"
+    },
+    "relation_rationale": {
+      "description": "Brief rationale for the H\u2194H revision type (one short line, max 120 characters).",
+      "maxLength": 120,
+      "title": "Relation Rationale",
+      "type": "string"
+    },
+    "confidence_delta": {
+      "description": "How confidence changed: 'increased', 'decreased', or 'unchanged'",
+      "title": "Confidence Delta",
+      "type": "string"
+    },
+    "key_changes": {
+      "description": "Bullet list of specific changes made to the hypothesis",
+      "items": {
+        "type": "string"
+      },
+      "title": "Key Changes",
+      "type": "array"
+    },
+    "relation_type": {
+      "description": "Moulines's structuralist typology of this hypothesis revision: 'evolution' \u2014 refining specialised claims while keeping the same conceptual frame; 'embedding' \u2014 the previous hypothesis is now a special case of a broader frame; 'replacement' \u2014 rejecting the previous frame entirely (incommensurable, Kuhnian revolution).",
+      "enum": [
+        "evolution",
+        "embedding",
+        "replacement"
+      ],
+      "title": "Relation Type",
+      "type": "string"
+    },
+    "artifact_relations": {
+      "description": "Typed A\u2194A edges for this iteration's new artifacts. Emit one entry per (predecessor \u2192 dependent) edge for every in_dependency on each artifact produced this iteration.",
+      "items": {
+        "$ref": "#/$defs/ArtifactRelation"
+      },
+      "title": "Artifact Relations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "hypothesis",
+    "relation_rationale",
+    "confidence_delta",
+    "key_changes",
+    "relation_type"
+  ],
+  "title": "RevisedHypothesis",
+  "type": "object"
+}
+```
+
+IMPORTANT: this task is NOT complete until `/ai-inventor/aii_data/runs/run_om2tRiXGCTOe/3_invention_loop/iter_1/upd_hypo/upd_hypo/.sdk_openhands_agent_struct_out.json` exists and contains JSON matching the schema above.
+````
+
+### [2] HUMAN-USER prompt · 2026-08-01 15:20:37 UTC
+
+```
+Test whether a 3-point moving average beats a naive last-value forecast on a short synthetic series. Keep the investigation minimal.
+```
