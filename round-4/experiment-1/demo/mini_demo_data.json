@@ -1,0 +1,80 @@
+{
+  "datasets": [
+    {
+      "dataset": "gsm8k",
+      "examples": [
+        {
+          "input": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "output": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer\u2019s market.\n#### 18",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "metadata_paraphrase_2": "Assuming the following scenario: Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?"
+        },
+        {
+          "input": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+          "output": "It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of fabric\n#### 3",
+          "metadata_fold": 0,
+          "metadata_row_index": 1,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "A robe takes 2 bolts of blue fiber and half that much white fiber. How many bolts in combined sum does it take?",
+          "metadata_paraphrase_2": "Assuming the following scenario: A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?"
+        },
+        {
+          "input": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+          "output": "The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increased the value of the house by 80,000*1.5=<<80000*1.5=120000>>120,000\nSo the new value of the house is 120,000+80,000=$<<120000+80000=200000>>200,000\nSo he made a profit of 200,000-130,000=$<<200000-130000=70000>>70,000\n#### 70000",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Josh decides to try flipping a house. He buys a house for $80,000 and then puts in $50,000 in repairs. This increased the value of the house by 150%. How much profit did he make?",
+          "metadata_paraphrase_2": "Assuming the following scenario: Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?"
+        }
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "examples": [
+        {
+          "input": "Write a python function to remove first and last occurrence of a given character from the string.",
+          "output": "def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    for i in range(len(s) - 1,-1,-1):  \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    return s ",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Implement a python routine to remove first and last occurrence of a provided character from the text sequence",
+          "metadata_paraphrase_2": "Assuming the following scenario: Write a python function to remove first and last occurrence of a given character from the string.. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Write a python function to remove first and last occurrence of a given character from the string."
+        },
+        {
+          "input": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+          "output": "def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result",
+          "metadata_fold": 0,
+          "metadata_row_index": 1,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Implement a routine to sort a provided matrix in ascending order according to the sum of its rows.",
+          "metadata_paraphrase_2": "Assuming the following scenario: Write a function to sort a given matrix in ascending order according to the sum of its rows.. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Write a function to sort a given matrix in ascending order according to the sum of its rows."
+        },
+        {
+          "input": "Write a function to count the most common words in a dictionary.",
+          "output": "from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_four = word_counts.most_common(4)\r\n  return (top_four)\r\n",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Implement a routine to count the most common words in a dictionary.",
+          "metadata_paraphrase_2": "Assuming the following scenario: Write a function to count the most common words in a dictionary.. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Write a function to count the most common words in a dictionary."
+        }
+      ]
+    }
+  ]
+}
