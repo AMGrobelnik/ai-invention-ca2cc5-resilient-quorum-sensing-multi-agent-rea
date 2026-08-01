@@ -1,0 +1,46 @@
+{
+  "datasets": [
+    {
+      "dataset": "gsm8k",
+      "examples": [
+        {
+          "input": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "output": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer\u2019s market.\n#### 18",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "metadata_paraphrase_2": "Assuming the following scenario: Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "predict_static_llama": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer\u2019s market.\n#### 18",
+          "predict_static_sonnet": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer\u2019s market.\n#### 18",
+          "predict_hierarchical_routing": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer\u2019s market.\n#### 18",
+          "predict_random_escalation": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer\u2019s market.\n#### 18",
+          "predict_quorum_token_queues": "Incorrect or incomplete reasoning trace."
+        }
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "examples": [
+        {
+          "input": "Write a python function to remove first and last occurrence of a given character from the string.",
+          "output": "def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    for i in range(len(s) - 1,-1,-1):  \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    return s ",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Implement a python routine to remove first and last occurrence of a provided character from the text sequence",
+          "metadata_paraphrase_2": "Assuming the following scenario: Write a python function to remove first and last occurrence of a given character from the string.. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Write a python function to remove first and last occurrence of a given character from the string.",
+          "predict_static_llama": "Incorrect or incomplete reasoning trace.",
+          "predict_static_sonnet": "def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    for i in range(len(s) - 1,-1,-1):  \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    return s ",
+          "predict_hierarchical_routing": "Incorrect or incomplete reasoning trace.",
+          "predict_random_escalation": "Incorrect or incomplete reasoning trace.",
+          "predict_quorum_token_queues": "Incorrect or incomplete reasoning trace."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "experiment_title": "Simulating Resilient Quorum Token Queues",
+  "summary": "Evaluation of distributed quorum token queues, autoinduction recurrence relations, and sliding window consensus gates under Pareto WAN tail latencies across GSM8K and MBPP reasoning benchmarks.",
+  "strategies": [
+    {
+      "strategy": "static_llama",
+      "accuracy": 0.7064,
+      "total_tasks": 2500,
+      "total_tokens": 1125000.0,
+      "total_cost": 0.22500000000001202,
+      "avg_cost_per_task": 9.00000000000048e-05,
+      "escalation_events": 0,
+      "consensus_failures": 0
+    },
+    {
+      "strategy": "static_sonnet",
+      "accuracy": 0.904,
+      "total_tasks": 2500,
+      "total_tokens": 1625000.0,
+      "total_cost": 9.749999999999595,
+      "avg_cost_per_task": 0.003899999999999838,
+      "escalation_events": 0,
+      "consensus_failures": 0
+    },
+    {
+      "strategy": "hierarchical_routing",
+      "accuracy": 0.7624,
+      "total_tasks": 2500,
+      "total_tokens": 1275000.0,
+      "total_cost": 3.082500000000004,
+      "avg_cost_per_task": 0.0012330000000000017,
+      "escalation_events": 0,
+      "consensus_failures": 0
+    },
+    {
+      "strategy": "random_escalation",
+      "accuracy": 0.742,
+      "total_tasks": 2500,
+      "total_tokens": 1278600.0,
+      "total_cost": 3.151079999999997,
+      "avg_cost_per_task": 0.0012604319999999988,
+      "escalation_events": 0,
+      "consensus_failures": 0
+    },
+    {
+      "strategy": "quorum_token_queues",
+      "accuracy": 0.9024,
+      "total_tasks": 2500,
+      "total_tokens": 1623800.0,
+      "total_cost": 9.727139999999595,
+      "avg_cost_per_task": 0.003890855999999838,
+      "escalation_events": 25,
+      "consensus_failures": 0
+    }
+  ]
+}

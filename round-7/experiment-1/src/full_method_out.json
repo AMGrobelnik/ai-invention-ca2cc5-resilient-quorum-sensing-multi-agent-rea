@@ -1,0 +1,989 @@
+{
+  "metadata": {
+    "title": "Moving Average vs Naive Persistence Forecasting",
+    "description": "Comparison of 3-point moving average, EWMA, and naive persistence on synthetic time series."
+  },
+  "datasets": [
+    {
+      "dataset": "synthetic_autoinducer_buffer_time_series",
+      "examples": [
+        {
+          "input": "Synthetic time series forecast step 10 for seed 42",
+          "output": "8.58372977732661",
+          "predict_naive": "10.133390611832127",
+          "predict_moving_average_3": "8.959240993682029",
+          "predict_ewma": "8.649477069551196",
+          "metadata_seed": "42",
+          "metadata_step": "10"
+        },
+        {
+          "input": "Synthetic time series forecast step 11 for seed 42",
+          "output": "8.891413000146374",
+          "predict_naive": "8.58372977732661",
+          "predict_moving_average_3": "8.740483624102994",
+          "predict_ewma": "8.623178152661362",
+          "metadata_seed": "42",
+          "metadata_step": "11"
+        },
+        {
+          "input": "Synthetic time series forecast step 12 for seed 42",
+          "output": "10.464191827414783",
+          "predict_naive": "8.891413000146374",
+          "predict_moving_average_3": "9.202844463101703",
+          "predict_ewma": "8.730472091655367",
+          "metadata_seed": "42",
+          "metadata_step": "12"
+        },
+        {
+          "input": "Synthetic time series forecast step 13 for seed 42",
+          "output": "6.15370679496712",
+          "predict_naive": "10.464191827414783",
+          "predict_moving_average_3": "9.313111534962589",
+          "predict_ewma": "9.423959985959133",
+          "metadata_seed": "42",
+          "metadata_step": "13"
+        },
+        {
+          "input": "Synthetic time series forecast step 14 for seed 42",
+          "output": "6.373036842260821",
+          "predict_naive": "6.15370679496712",
+          "predict_moving_average_3": "8.503103874176093",
+          "predict_ewma": "8.115858709562328",
+          "metadata_seed": "42",
+          "metadata_step": "14"
+        },
+        {
+          "input": "Synthetic time series forecast step 15 for seed 42",
+          "output": "8.385990104469592",
+          "predict_naive": "6.373036842260821",
+          "predict_moving_average_3": "7.663645154880908",
+          "predict_ewma": "7.418729962641725",
+          "metadata_seed": "42",
+          "metadata_step": "15"
+        },
+        {
+          "input": "Synthetic time series forecast step 16 for seed 42",
+          "output": "7.022608283991348",
+          "predict_naive": "8.385990104469592",
+          "predict_moving_average_3": "6.970911247232511",
+          "predict_ewma": "7.805634019372872",
+          "metadata_seed": "42",
+          "metadata_step": "16"
+        },
+        {
+          "input": "Synthetic time series forecast step 17 for seed 42",
+          "output": "9.071773920210697",
+          "predict_naive": "7.022608283991348",
+          "predict_moving_average_3": "7.2605450769072535",
+          "predict_ewma": "7.492423725220263",
+          "metadata_seed": "42",
+          "metadata_step": "17"
+        },
+        {
+          "input": "Synthetic time series forecast step 18 for seed 42",
+          "output": "5.8890842767154705",
+          "predict_naive": "9.071773920210697",
+          "predict_moving_average_3": "8.160124102890546",
+          "predict_ewma": "8.124163803216437",
+          "metadata_seed": "42",
+          "metadata_step": "18"
+        },
+        {
+          "input": "Synthetic time series forecast step 19 for seed 42",
+          "output": "4.020863656616305",
+          "predict_naive": "5.8890842767154705",
+          "predict_moving_average_3": "7.327822160305838",
+          "predict_ewma": "7.23013199261605",
+          "metadata_seed": "42",
+          "metadata_step": "19"
+        },
+        {
+          "input": "Synthetic time series forecast step 20 for seed 42",
+          "output": "8.809150060767841",
+          "predict_naive": "4.020863656616305",
+          "predict_moving_average_3": "6.327240617847491",
+          "predict_ewma": "5.946424658216151",
+          "metadata_seed": "42",
+          "metadata_step": "20"
+        },
+        {
+          "input": "Synthetic time series forecast step 21 for seed 42",
+          "output": "4.36598414004408",
+          "predict_naive": "8.809150060767841",
+          "predict_moving_average_3": "6.2396993313665385",
+          "predict_ewma": "7.091514819236828",
+          "metadata_seed": "42",
+          "metadata_step": "21"
+        },
+        {
+          "input": "Synthetic time series forecast step 22 for seed 42",
+          "output": "3.816301936222629",
+          "predict_naive": "4.36598414004408",
+          "predict_moving_average_3": "5.731999285809408",
+          "predict_ewma": "6.001302547559729",
+          "metadata_seed": "42",
+          "metadata_step": "22"
+        },
+        {
+          "input": "Synthetic time series forecast step 23 for seed 42",
+          "output": "-0.36259750077836106",
+          "predict_naive": "3.816301936222629",
+          "predict_moving_average_3": "5.663812045678184",
+          "predict_ewma": "5.127302303024889",
+          "metadata_seed": "42",
+          "metadata_step": "23"
+        },
+        {
+          "input": "Synthetic time series forecast step 24 for seed 42",
+          "output": "0.16456688659267993",
+          "predict_naive": "-0.36259750077836106",
+          "predict_moving_average_3": "2.606562858496116",
+          "predict_ewma": "2.931342381503589",
+          "metadata_seed": "42",
+          "metadata_step": "24"
+        },
+        {
+          "input": "Synthetic time series forecast step 25 for seed 42",
+          "output": "0.2218451794197334",
+          "predict_naive": "0.16456688659267993",
+          "predict_moving_average_3": "1.2060904406789825",
+          "predict_ewma": "1.8246321835392252",
+          "metadata_seed": "42",
+          "metadata_step": "25"
+        },
+        {
+          "input": "Synthetic time series forecast step 26 for seed 42",
+          "output": "-3.5553194904876486",
+          "predict_naive": "0.2218451794197334",
+          "predict_moving_average_3": "0.007938188411350744",
+          "predict_ewma": "1.1835173818914284",
+          "metadata_seed": "42",
+          "metadata_step": "26"
+        },
+        {
+          "input": "Synthetic time series forecast step 27 for seed 42",
+          "output": "-1.735502834957202",
+          "predict_naive": "-3.5553194904876486",
+          "predict_moving_average_3": "-1.0563024748250784",
+          "predict_ewma": "-0.7120173670602026",
+          "metadata_seed": "42",
+          "metadata_step": "27"
+        },
+        {
+          "input": "Synthetic time series forecast step 28 for seed 42",
+          "output": "-4.88252290668439",
+          "predict_naive": "-1.735502834957202",
+          "predict_moving_average_3": "-1.689659048675039",
+          "predict_ewma": "-1.1214115542190024",
+          "metadata_seed": "42",
+          "metadata_step": "28"
+        },
+        {
+          "input": "Synthetic time series forecast step 29 for seed 42",
+          "output": "-5.4009242406037075",
+          "predict_naive": "-4.88252290668439",
+          "predict_moving_average_3": "-3.3911150773764134",
+          "predict_ewma": "-2.6258560952051573",
+          "metadata_seed": "42",
+          "metadata_step": "29"
+        },
+        {
+          "input": "Synthetic time series forecast step 10 for seed 123",
+          "output": "8.152792859707425",
+          "predict_naive": "7.314789720129993",
+          "predict_moving_average_3": "8.379082887535583",
+          "predict_ewma": "7.35446630020609",
+          "metadata_seed": "123",
+          "metadata_step": "10"
+        },
+        {
+          "input": "Synthetic time series forecast step 11 for seed 123",
+          "output": "9.633454569413104",
+          "predict_naive": "8.152792859707425",
+          "predict_moving_average_3": "8.814244784089546",
+          "predict_ewma": "7.6737969240066235",
+          "metadata_seed": "123",
+          "metadata_step": "11"
+        },
+        {
+          "input": "Synthetic time series forecast step 12 for seed 123",
+          "output": "12.96304653653129",
+          "predict_naive": "9.633454569413104",
+          "predict_moving_average_3": "8.367012383083507",
+          "predict_ewma": "8.457659982169215",
+          "metadata_seed": "123",
+          "metadata_step": "12"
+        },
+        {
+          "input": "Synthetic time series forecast step 13 for seed 123",
+          "output": "8.702463290913414",
+          "predict_naive": "12.96304653653129",
+          "predict_moving_average_3": "10.249764655217273",
+          "predict_ewma": "10.259814603914045",
+          "metadata_seed": "123",
+          "metadata_step": "13"
+        },
+        {
+          "input": "Synthetic time series forecast step 14 for seed 123",
+          "output": "8.934908587994755",
+          "predict_naive": "8.702463290913414",
+          "predict_moving_average_3": "10.432988132285937",
+          "predict_ewma": "9.636874078713792",
+          "metadata_seed": "123",
+          "metadata_step": "14"
+        },
+        {
+          "input": "Synthetic time series forecast step 15 for seed 123",
+          "output": "8.641862611714501",
+          "predict_naive": "8.934908587994755",
+          "predict_moving_average_3": "10.200139471813154",
+          "predict_ewma": "9.356087882426177",
+          "metadata_seed": "123",
+          "metadata_step": "15"
+        },
+        {
+          "input": "Synthetic time series forecast step 16 for seed 123",
+          "output": "13.460130690111107",
+          "predict_naive": "8.641862611714501",
+          "predict_moving_average_3": "8.759744830207557",
+          "predict_ewma": "9.070397774141506",
+          "metadata_seed": "123",
+          "metadata_step": "16"
+        },
+        {
+          "input": "Synthetic time series forecast step 17 for seed 123",
+          "output": "12.816851432967724",
+          "predict_naive": "13.460130690111107",
+          "predict_moving_average_3": "10.345633963273455",
+          "predict_ewma": "10.826290940529347",
+          "metadata_seed": "123",
+          "metadata_step": "17"
+        },
+        {
+          "input": "Synthetic time series forecast step 18 for seed 123",
+          "output": "9.713240223515646",
+          "predict_naive": "12.816851432967724",
+          "predict_moving_average_3": "11.639614911597777",
+          "predict_ewma": "11.622515137504697",
+          "metadata_seed": "123",
+          "metadata_step": "18"
+        },
+        {
+          "input": "Synthetic time series forecast step 19 for seed 123",
+          "output": "7.6178438576366005",
+          "predict_naive": "9.713240223515646",
+          "predict_moving_average_3": "11.99674078219816",
+          "predict_ewma": "10.858805171909076",
+          "metadata_seed": "123",
+          "metadata_step": "19"
+        },
+        {
+          "input": "Synthetic time series forecast step 20 for seed 123",
+          "output": "7.352589674717217",
+          "predict_naive": "7.6178438576366005",
+          "predict_moving_average_3": "10.04931183803999",
+          "predict_ewma": "9.562420646200085",
+          "metadata_seed": "123",
+          "metadata_step": "20"
+        },
+        {
+          "input": "Synthetic time series forecast step 21 for seed 123",
+          "output": "7.79900079731875",
+          "predict_naive": "7.352589674717217",
+          "predict_moving_average_3": "8.227891251956487",
+          "predict_ewma": "8.678488257606938",
+          "metadata_seed": "123",
+          "metadata_step": "21"
+        },
+        {
+          "input": "Synthetic time series forecast step 22 for seed 123",
+          "output": "1.8095777900419987",
+          "predict_naive": "7.79900079731875",
+          "predict_moving_average_3": "7.589811443224189",
+          "predict_ewma": "8.326693273491664",
+          "metadata_seed": "123",
+          "metadata_step": "22"
+        },
+        {
+          "input": "Synthetic time series forecast step 23 for seed 123",
+          "output": "4.83855696121276",
+          "predict_naive": "1.8095777900419987",
+          "predict_moving_average_3": "5.6537227540259885",
+          "predict_ewma": "5.719847080111798",
+          "metadata_seed": "123",
+          "metadata_step": "23"
+        },
+        {
+          "input": "Synthetic time series forecast step 24 for seed 123",
+          "output": "-1.2544289998549796",
+          "predict_naive": "4.83855696121276",
+          "predict_moving_average_3": "4.8157118495245035",
+          "predict_ewma": "5.367331032552182",
+          "metadata_seed": "123",
+          "metadata_step": "24"
+        },
+        {
+          "input": "Synthetic time series forecast step 25 for seed 123",
+          "output": "-1.2755030049068192",
+          "predict_naive": "-1.2544289998549796",
+          "predict_moving_average_3": "1.7979019171332595",
+          "predict_ewma": "2.7186270195893174",
+          "metadata_seed": "123",
+          "metadata_step": "25"
+        },
+        {
+          "input": "Synthetic time series forecast step 26 for seed 123",
+          "output": "0.5608780559575597",
+          "predict_naive": "-1.2755030049068192",
+          "predict_moving_average_3": "0.7695416521503203",
+          "predict_ewma": "1.1209750097908628",
+          "metadata_seed": "123",
+          "metadata_step": "26"
+        },
+        {
+          "input": "Synthetic time series forecast step 27 for seed 123",
+          "output": "-5.344260272100484",
+          "predict_naive": "0.5608780559575597",
+          "predict_moving_average_3": "-0.6563513162680797",
+          "predict_ewma": "0.8969362282575415",
+          "metadata_seed": "123",
+          "metadata_step": "27"
+        },
+        {
+          "input": "Synthetic time series forecast step 28 for seed 123",
+          "output": "-3.9613829672241114",
+          "predict_naive": "-5.344260272100484",
+          "predict_moving_average_3": "-2.019628407016581",
+          "predict_ewma": "-1.5995423718856687",
+          "metadata_seed": "123",
+          "metadata_step": "28"
+        },
+        {
+          "input": "Synthetic time series forecast step 29 for seed 123",
+          "output": "-6.541046532736525",
+          "predict_naive": "-3.9613829672241114",
+          "predict_moving_average_3": "-2.9149217277890123",
+          "predict_ewma": "-2.544278610021046",
+          "metadata_seed": "123",
+          "metadata_step": "29"
+        },
+        {
+          "input": "Synthetic time series forecast step 10 for seed 456",
+          "output": "5.478622471973932",
+          "predict_naive": "8.417808865235587",
+          "predict_moving_average_3": "8.25785488913307",
+          "predict_ewma": "7.9375473909678345",
+          "metadata_seed": "456",
+          "metadata_step": "10"
+        },
+        {
+          "input": "Synthetic time series forecast step 11 for seed 456",
+          "output": "7.562410033958762",
+          "predict_naive": "5.478622471973932",
+          "predict_moving_average_3": "7.2160294527648245",
+          "predict_ewma": "6.953977423370274",
+          "metadata_seed": "456",
+          "metadata_step": "11"
+        },
+        {
+          "input": "Synthetic time series forecast step 12 for seed 456",
+          "output": "7.756575152898845",
+          "predict_naive": "7.562410033958762",
+          "predict_moving_average_3": "7.152947123722761",
+          "predict_ewma": "7.197350467605669",
+          "metadata_seed": "456",
+          "metadata_step": "12"
+        },
+        {
+          "input": "Synthetic time series forecast step 13 for seed 456",
+          "output": "10.455969502683299",
+          "predict_naive": "7.756575152898845",
+          "predict_moving_average_3": "6.932535886277179",
+          "predict_ewma": "7.421040341722939",
+          "metadata_seed": "456",
+          "metadata_step": "13"
+        },
+        {
+          "input": "Synthetic time series forecast step 14 for seed 456",
+          "output": "9.172613173501343",
+          "predict_naive": "10.455969502683299",
+          "predict_moving_average_3": "8.591651563180301",
+          "predict_ewma": "8.635012006107083",
+          "metadata_seed": "456",
+          "metadata_step": "14"
+        },
+        {
+          "input": "Synthetic time series forecast step 15 for seed 456",
+          "output": "13.39996994937976",
+          "predict_naive": "9.172613173501343",
+          "predict_moving_average_3": "9.12838594302783",
+          "predict_ewma": "8.850052473064787",
+          "metadata_seed": "456",
+          "metadata_step": "15"
+        },
+        {
+          "input": "Synthetic time series forecast step 16 for seed 456",
+          "output": "12.879622587963725",
+          "predict_naive": "13.39996994937976",
+          "predict_moving_average_3": "11.0095175418548",
+          "predict_ewma": "10.670019463590776",
+          "metadata_seed": "456",
+          "metadata_step": "16"
+        },
+        {
+          "input": "Synthetic time series forecast step 17 for seed 456",
+          "output": "10.283975966698423",
+          "predict_naive": "12.879622587963725",
+          "predict_moving_average_3": "11.817401903614941",
+          "predict_ewma": "11.553860713339956",
+          "metadata_seed": "456",
+          "metadata_step": "17"
+        },
+        {
+          "input": "Synthetic time series forecast step 18 for seed 456",
+          "output": "9.577929090195175",
+          "predict_naive": "10.283975966698423",
+          "predict_moving_average_3": "12.18785616801397",
+          "predict_ewma": "11.045906814683342",
+          "metadata_seed": "456",
+          "metadata_step": "18"
+        },
+        {
+          "input": "Synthetic time series forecast step 19 for seed 456",
+          "output": "9.160575135224956",
+          "predict_naive": "9.577929090195175",
+          "predict_moving_average_3": "10.913842548285773",
+          "predict_ewma": "10.458715724888075",
+          "metadata_seed": "456",
+          "metadata_step": "19"
+        },
+        {
+          "input": "Synthetic time series forecast step 20 for seed 456",
+          "output": "5.665437110212891",
+          "predict_naive": "9.160575135224956",
+          "predict_moving_average_3": "9.674160064039517",
+          "predict_ewma": "9.939459489022827",
+          "metadata_seed": "456",
+          "metadata_step": "20"
+        },
+        {
+          "input": "Synthetic time series forecast step 21 for seed 456",
+          "output": "4.640033471746036",
+          "predict_naive": "5.665437110212891",
+          "predict_moving_average_3": "8.134647111877674",
+          "predict_ewma": "8.229850537498852",
+          "metadata_seed": "456",
+          "metadata_step": "21"
+        },
+        {
+          "input": "Synthetic time series forecast step 22 for seed 456",
+          "output": "1.7382751545685542",
+          "predict_naive": "4.640033471746036",
+          "predict_moving_average_3": "6.488681905727961",
+          "predict_ewma": "6.793923711197725",
+          "metadata_seed": "456",
+          "metadata_step": "22"
+        },
+        {
+          "input": "Synthetic time series forecast step 23 for seed 456",
+          "output": "1.7187778870696455",
+          "predict_naive": "1.7382751545685542",
+          "predict_moving_average_3": "4.014581912175827",
+          "predict_ewma": "4.771664288546057",
+          "metadata_seed": "456",
+          "metadata_step": "23"
+        },
+        {
+          "input": "Synthetic time series forecast step 24 for seed 456",
+          "output": "3.5330777062901815",
+          "predict_naive": "1.7187778870696455",
+          "predict_moving_average_3": "2.6990288377947453",
+          "predict_ewma": "3.5505097279554922",
+          "metadata_seed": "456",
+          "metadata_step": "24"
+        },
+        {
+          "input": "Synthetic time series forecast step 25 for seed 456",
+          "output": "0.2727436400537395",
+          "predict_naive": "3.5330777062901815",
+          "predict_moving_average_3": "2.330043582642794",
+          "predict_ewma": "3.543536919289368",
+          "metadata_seed": "456",
+          "metadata_step": "25"
+        },
+        {
+          "input": "Synthetic time series forecast step 26 for seed 456",
+          "output": "-1.9872284451723115",
+          "predict_naive": "0.2727436400537395",
+          "predict_moving_average_3": "1.841533077804522",
+          "predict_ewma": "2.2352196075951167",
+          "metadata_seed": "456",
+          "metadata_step": "26"
+        },
+        {
+          "input": "Synthetic time series forecast step 27 for seed 456",
+          "output": "-3.089069845797635",
+          "predict_naive": "-1.9872284451723115",
+          "predict_moving_average_3": "0.6061976337238698",
+          "predict_ewma": "0.5462403864881453",
+          "metadata_seed": "456",
+          "metadata_step": "27"
+        },
+        {
+          "input": "Synthetic time series forecast step 28 for seed 456",
+          "output": "-3.4659661837995457",
+          "predict_naive": "-3.089069845797635",
+          "predict_moving_average_3": "-1.6011848836387355",
+          "predict_ewma": "-0.9078837064261669",
+          "metadata_seed": "456",
+          "metadata_step": "28"
+        },
+        {
+          "input": "Synthetic time series forecast step 29 for seed 456",
+          "output": "-2.5342670616799206",
+          "predict_naive": "-3.4659661837995457",
+          "predict_moving_average_3": "-2.847421491589831",
+          "predict_ewma": "-1.9311166973755185",
+          "metadata_seed": "456",
+          "metadata_step": "29"
+        },
+        {
+          "input": "Synthetic time series forecast step 10 for seed 789",
+          "output": "11.120910257964038",
+          "predict_naive": "11.158996058258657",
+          "predict_moving_average_3": "8.086227274926381",
+          "predict_ewma": "8.07349274882193",
+          "metadata_seed": "789",
+          "metadata_step": "10"
+        },
+        {
+          "input": "Synthetic time series forecast step 11 for seed 789",
+          "output": "12.494241564885593",
+          "predict_naive": "11.120910257964038",
+          "predict_moving_average_3": "9.61988107538074",
+          "predict_ewma": "9.292459752478774",
+          "metadata_seed": "789",
+          "metadata_step": "11"
+        },
+        {
+          "input": "Synthetic time series forecast step 12 for seed 789",
+          "output": "9.130011525640334",
+          "predict_naive": "12.494241564885593",
+          "predict_moving_average_3": "11.591382627036097",
+          "predict_ewma": "10.573172477441501",
+          "metadata_seed": "789",
+          "metadata_step": "12"
+        },
+        {
+          "input": "Synthetic time series forecast step 13 for seed 789",
+          "output": "9.34319578487123",
+          "predict_naive": "9.130011525640334",
+          "predict_moving_average_3": "10.915054449496656",
+          "predict_ewma": "9.995908096721035",
+          "metadata_seed": "789",
+          "metadata_step": "13"
+        },
+        {
+          "input": "Synthetic time series forecast step 14 for seed 789",
+          "output": "8.094131690690062",
+          "predict_naive": "9.34319578487123",
+          "predict_moving_average_3": "10.32248295846572",
+          "predict_ewma": "9.734823171981112",
+          "metadata_seed": "789",
+          "metadata_step": "14"
+        },
+        {
+          "input": "Synthetic time series forecast step 15 for seed 789",
+          "output": "6.004033286450764",
+          "predict_naive": "8.094131690690062",
+          "predict_moving_average_3": "8.855779667067209",
+          "predict_ewma": "9.078546579464692",
+          "metadata_seed": "789",
+          "metadata_step": "15"
+        },
+        {
+          "input": "Synthetic time series forecast step 16 for seed 789",
+          "output": "9.576004201244961",
+          "predict_naive": "6.004033286450764",
+          "predict_moving_average_3": "7.813786920670686",
+          "predict_ewma": "7.8487412622591215",
+          "metadata_seed": "789",
+          "metadata_step": "16"
+        },
+        {
+          "input": "Synthetic time series forecast step 17 for seed 789",
+          "output": "6.347422402304215",
+          "predict_naive": "9.576004201244961",
+          "predict_moving_average_3": "7.891389726128597",
+          "predict_ewma": "8.539646437853458",
+          "metadata_seed": "789",
+          "metadata_step": "17"
+        },
+        {
+          "input": "Synthetic time series forecast step 18 for seed 789",
+          "output": "10.238557973074798",
+          "predict_naive": "6.347422402304215",
+          "predict_moving_average_3": "7.309153296666647",
+          "predict_ewma": "7.66275682363376",
+          "metadata_seed": "789",
+          "metadata_step": "18"
+        },
+        {
+          "input": "Synthetic time series forecast step 19 for seed 789",
+          "output": "3.4253373168349746",
+          "predict_naive": "10.238557973074798",
+          "predict_moving_average_3": "8.720661525541324",
+          "predict_ewma": "8.693077283410176",
+          "metadata_seed": "789",
+          "metadata_step": "19"
+        },
+        {
+          "input": "Synthetic time series forecast step 20 for seed 789",
+          "output": "6.880218053991895",
+          "predict_naive": "3.4253373168349746",
+          "predict_moving_average_3": "6.670439230737995",
+          "predict_ewma": "6.585981296780096",
+          "metadata_seed": "789",
+          "metadata_step": "20"
+        },
+        {
+          "input": "Synthetic time series forecast step 21 for seed 789",
+          "output": "5.6474865630646445",
+          "predict_naive": "6.880218053991895",
+          "predict_moving_average_3": "6.8480377813005555",
+          "predict_ewma": "6.703675999664815",
+          "metadata_seed": "789",
+          "metadata_step": "21"
+        },
+        {
+          "input": "Synthetic time series forecast step 22 for seed 789",
+          "output": "5.455913623626964",
+          "predict_naive": "5.6474865630646445",
+          "predict_moving_average_3": "5.317680644630505",
+          "predict_ewma": "6.281200225024747",
+          "metadata_seed": "789",
+          "metadata_step": "22"
+        },
+        {
+          "input": "Synthetic time series forecast step 23 for seed 789",
+          "output": "2.4889604009216426",
+          "predict_naive": "5.455913623626964",
+          "predict_moving_average_3": "5.994539413561168",
+          "predict_ewma": "5.951085584465634",
+          "metadata_seed": "789",
+          "metadata_step": "23"
+        },
+        {
+          "input": "Synthetic time series forecast step 24 for seed 789",
+          "output": "3.6233175539212947",
+          "predict_naive": "2.4889604009216426",
+          "predict_moving_average_3": "4.5307868625377505",
+          "predict_ewma": "4.5662355110480375",
+          "metadata_seed": "789",
+          "metadata_step": "24"
+        },
+        {
+          "input": "Synthetic time series forecast step 25 for seed 789",
+          "output": "-0.045240316851303405",
+          "predict_naive": "3.6233175539212947",
+          "predict_moving_average_3": "3.8560638594899674",
+          "predict_ewma": "4.18906832819734",
+          "metadata_seed": "789",
+          "metadata_step": "25"
+        },
+        {
+          "input": "Synthetic time series forecast step 26 for seed 789",
+          "output": "-2.286018299941322",
+          "predict_naive": "-0.045240316851303405",
+          "predict_moving_average_3": "2.0223458793305444",
+          "predict_ewma": "2.4953448701778824",
+          "metadata_seed": "789",
+          "metadata_step": "26"
+        },
+        {
+          "input": "Synthetic time series forecast step 27 for seed 789",
+          "output": "-1.3239904125833093",
+          "predict_naive": "-2.286018299941322",
+          "predict_moving_average_3": "0.43068631237622307",
+          "predict_ewma": "0.5827996021302007",
+          "metadata_seed": "789",
+          "metadata_step": "27"
+        },
+        {
+          "input": "Synthetic time series forecast step 28 for seed 789",
+          "output": "-4.346223099967417",
+          "predict_naive": "-1.3239904125833093",
+          "predict_moving_average_3": "-1.2184163431253114",
+          "predict_ewma": "-0.17991640375520335",
+          "metadata_seed": "789",
+          "metadata_step": "28"
+        },
+        {
+          "input": "Synthetic time series forecast step 29 for seed 789",
+          "output": "-5.375446148562051",
+          "predict_naive": "-4.346223099967417",
+          "predict_moving_average_3": "-2.6520772708306826",
+          "predict_ewma": "-1.8464390822400887",
+          "metadata_seed": "789",
+          "metadata_step": "29"
+        },
+        {
+          "input": "Synthetic time series forecast step 10 for seed 1011",
+          "output": "9.851188603701445",
+          "predict_naive": "7.863329035656229",
+          "predict_moving_average_3": "8.382446027244624",
+          "predict_ewma": "7.934084755070695",
+          "metadata_seed": "1011",
+          "metadata_step": "10"
+        },
+        {
+          "input": "Synthetic time series forecast step 11 for seed 1011",
+          "output": "8.90594608899689",
+          "predict_naive": "9.851188603701445",
+          "predict_moving_average_3": "8.640739744164172",
+          "predict_ewma": "8.700926294522995",
+          "metadata_seed": "1011",
+          "metadata_step": "11"
+        },
+        {
+          "input": "Synthetic time series forecast step 12 for seed 1011",
+          "output": "12.682788424548502",
+          "predict_naive": "8.90594608899689",
+          "predict_moving_average_3": "8.873487909451521",
+          "predict_ewma": "8.782934212312554",
+          "metadata_seed": "1011",
+          "metadata_step": "12"
+        },
+        {
+          "input": "Synthetic time series forecast step 13 for seed 1011",
+          "output": "9.405744418464343",
+          "predict_naive": "12.682788424548502",
+          "predict_moving_average_3": "10.479974372415612",
+          "predict_ewma": "10.342875897206934",
+          "metadata_seed": "1011",
+          "metadata_step": "13"
+        },
+        {
+          "input": "Synthetic time series forecast step 14 for seed 1011",
+          "output": "9.753420027862632",
+          "predict_naive": "9.405744418464343",
+          "predict_moving_average_3": "10.331492977336579",
+          "predict_ewma": "9.968023305709899",
+          "metadata_seed": "1011",
+          "metadata_step": "14"
+        },
+        {
+          "input": "Synthetic time series forecast step 15 for seed 1011",
+          "output": "12.528132500574516",
+          "predict_naive": "9.753420027862632",
+          "predict_moving_average_3": "10.613984290291826",
+          "predict_ewma": "9.882181994570992",
+          "metadata_seed": "1011",
+          "metadata_step": "15"
+        },
+        {
+          "input": "Synthetic time series forecast step 16 for seed 1011",
+          "output": "10.450724229345182",
+          "predict_naive": "12.528132500574516",
+          "predict_moving_average_3": "10.56243231563383",
+          "predict_ewma": "10.940562196972401",
+          "metadata_seed": "1011",
+          "metadata_step": "16"
+        },
+        {
+          "input": "Synthetic time series forecast step 17 for seed 1011",
+          "output": "6.778488708104436",
+          "predict_naive": "10.450724229345182",
+          "predict_moving_average_3": "10.910758919260777",
+          "predict_ewma": "10.744627009921514",
+          "metadata_seed": "1011",
+          "metadata_step": "17"
+        },
+        {
+          "input": "Synthetic time series forecast step 18 for seed 1011",
+          "output": "6.944710059704614",
+          "predict_naive": "6.778488708104436",
+          "predict_moving_average_3": "9.919115146008044",
+          "predict_ewma": "9.158171689194683",
+          "metadata_seed": "1011",
+          "metadata_step": "18"
+        },
+        {
+          "input": "Synthetic time series forecast step 19 for seed 1011",
+          "output": "10.875574013908759",
+          "predict_naive": "6.944710059704614",
+          "predict_moving_average_3": "8.057974332384743",
+          "predict_ewma": "8.272787037398656",
+          "metadata_seed": "1011",
+          "metadata_step": "19"
+        },
+        {
+          "input": "Synthetic time series forecast step 20 for seed 1011",
+          "output": "4.9724803214698765",
+          "predict_naive": "10.875574013908759",
+          "predict_moving_average_3": "8.199590927239269",
+          "predict_ewma": "9.313901828002697",
+          "metadata_seed": "1011",
+          "metadata_step": "20"
+        },
+        {
+          "input": "Synthetic time series forecast step 21 for seed 1011",
+          "output": "3.372884936165214",
+          "predict_naive": "4.9724803214698765",
+          "predict_moving_average_3": "7.597588131694416",
+          "predict_ewma": "7.577333225389569",
+          "metadata_seed": "1011",
+          "metadata_step": "21"
+        },
+        {
+          "input": "Synthetic time series forecast step 22 for seed 1011",
+          "output": "3.9857132866699287",
+          "predict_naive": "3.372884936165214",
+          "predict_moving_average_3": "6.406979757181283",
+          "predict_ewma": "5.895553909699827",
+          "metadata_seed": "1011",
+          "metadata_step": "22"
+        },
+        {
+          "input": "Synthetic time series forecast step 23 for seed 1011",
+          "output": "1.6479046301640365",
+          "predict_naive": "3.9857132866699287",
+          "predict_moving_average_3": "4.11035951476834",
+          "predict_ewma": "5.131617660487867",
+          "metadata_seed": "1011",
+          "metadata_step": "23"
+        },
+        {
+          "input": "Synthetic time series forecast step 24 for seed 1011",
+          "output": "-0.37158029160896167",
+          "predict_naive": "1.6479046301640365",
+          "predict_moving_average_3": "3.002167617666393",
+          "predict_ewma": "3.738132448358335",
+          "metadata_seed": "1011",
+          "metadata_step": "24"
+        },
+        {
+          "input": "Synthetic time series forecast step 25 for seed 1011",
+          "output": "-0.5629194400482841",
+          "predict_naive": "-0.37158029160896167",
+          "predict_moving_average_3": "1.7540125417416679",
+          "predict_ewma": "2.0942473523714162",
+          "metadata_seed": "1011",
+          "metadata_step": "25"
+        },
+        {
+          "input": "Synthetic time series forecast step 26 for seed 1011",
+          "output": "-1.937500690676441",
+          "predict_naive": "-0.5629194400482841",
+          "predict_moving_average_3": "0.23780163283559694",
+          "predict_ewma": "1.0313806354035362",
+          "metadata_seed": "1011",
+          "metadata_step": "26"
+        },
+        {
+          "input": "Synthetic time series forecast step 27 for seed 1011",
+          "output": "-0.8923016464652167",
+          "predict_naive": "-1.937500690676441",
+          "predict_moving_average_3": "-0.9573334741112288",
+          "predict_ewma": "-0.15617189502845474",
+          "metadata_seed": "1011",
+          "metadata_step": "27"
+        },
+        {
+          "input": "Synthetic time series forecast step 28 for seed 1011",
+          "output": "-7.415670656158497",
+          "predict_naive": "-0.8923016464652167",
+          "predict_moving_average_3": "-1.1309072590633138",
+          "predict_ewma": "-0.4506237956031595",
+          "metadata_seed": "1011",
+          "metadata_step": "28"
+        },
+        {
+          "input": "Synthetic time series forecast step 29 for seed 1011",
+          "output": "-2.548490206125991",
+          "predict_naive": "-7.415670656158497",
+          "predict_moving_average_3": "-3.415157664433385",
+          "predict_ewma": "-3.2366425398252945",
+          "metadata_seed": "1011",
+          "metadata_step": "29"
+        }
+      ]
+    },
+    {
+      "dataset": "gsm8k",
+      "examples": [
+        {
+          "input": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "output": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer’s market.\n#### 18",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+          "metadata_paraphrase_2": "Assuming the following scenario: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?"
+        },
+        {
+          "input": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+          "output": "It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of fabric\n#### 3",
+          "metadata_fold": 0,
+          "metadata_row_index": 1,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "A robe takes 2 bolts of blue fiber and half that much white fiber. How many bolts in combined sum does it take?",
+          "metadata_paraphrase_2": "Assuming the following scenario: A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?"
+        },
+        {
+          "input": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+          "output": "The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increased the value of the house by 80,000*1.5=<<80000*1.5=120000>>120,000\nSo the new value of the house is 120,000+80,000=$<<120000+80000=200000>>200,000\nSo he made a profit of 200,000-130,000=$<<200000-130000=70000>>70,000\n#### 70000",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Josh decides to try flipping a house. He buys a house for $80,000 and then puts in $50,000 in repairs. This increased the value of the house by 150%. How much profit did he make?",
+          "metadata_paraphrase_2": "Assuming the following scenario: Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?"
+        }
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "examples": [
+        {
+          "input": "Write a python function to remove first and last occurrence of a given character from the string.",
+          "output": "def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    for i in range(len(s) - 1,-1,-1):  \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    return s ",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Implement a python routine to remove first and last occurrence of a provided character from the text sequence",
+          "metadata_paraphrase_2": "Assuming the following scenario: Write a python function to remove first and last occurrence of a given character from the string.. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Write a python function to remove first and last occurrence of a given character from the string."
+        },
+        {
+          "input": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+          "output": "def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result",
+          "metadata_fold": 0,
+          "metadata_row_index": 1,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Implement a routine to sort a provided matrix in ascending order according to the sum of its rows.",
+          "metadata_paraphrase_2": "Assuming the following scenario: Write a function to sort a given matrix in ascending order according to the sum of its rows.. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Write a function to sort a given matrix in ascending order according to the sum of its rows."
+        },
+        {
+          "input": "Write a function to count the most common words in a dictionary.",
+          "output": "from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_four = word_counts.most_common(4)\r\n  return (top_four)\r\n",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_paraphrase_1": "Implement a routine to count the most common words in a dictionary.",
+          "metadata_paraphrase_2": "Assuming the following scenario: Write a function to count the most common words in a dictionary.. Determine the exact solution.",
+          "metadata_paraphrase_3": "Please solve this problem step by step: Write a function to count the most common words in a dictionary."
+        }
+      ]
+    }
+  ]
+}

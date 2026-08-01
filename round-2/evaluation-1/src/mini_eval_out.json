@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "evaluation_title": "Quorum-Sensing Sensitivity and Pareto Evaluation",
+    "description": "Evaluates sensitivity bounds, latency-accuracy Pareto trade-offs, and N > 10 scaling stability.",
+    "parameters_sweep": {
+      "thresholds": [
+        0.35,
+        0.45,
+        0.55,
+        0.65,
+        0.75
+      ],
+      "gammas": [
+        0.05,
+        0.1,
+        0.15,
+        0.25,
+        0.35
+      ]
+    },
+    "scaling_populations": [
+      2,
+      5,
+      10,
+      15,
+      20
+    ]
+  },
+  "metrics_agg": {
+    "sensitivity_robustness_score": 0.9776492605143464,
+    "pareto_efficiency_ratio": 46.77777777777778,
+    "scaling_stability_index": 0.9041666666666667,
+    "quorum_mean_accuracy": 0.6286666666666667,
+    "quorum_mean_cost": 0.021186000000000024,
+    "baseline_static_llama_accuracy": 0.615,
+    "baseline_static_sonnet_accuracy": 0.892,
+    "max_population_tested": 20
+  },
+  "datasets": [
+    {
+      "dataset": "reasoning_benchmark_gsm8k_subset",
+      "examples": [
+        {
+          "input": "If a store has 377 apples and sells 10 percent of them, how many apples remain?",
+          "output": "339.30",
+          "metadata_difficulty": 0.35367665723356584,
+          "predict_quorum_sensing": "llama-3-8b",
+          "predict_static_llama": "llama-3-8b",
+          "predict_static_sonnet": "claude-3-5-sonnet",
+          "predict_centralized_router": "llama-3-8b",
+          "predict_independent_threshold": "llama-3-8b",
+          "predict_reflexive_baseline": "claude-3-5-sonnet",
+          "predict_hierarchical_baseline": "llama-3-8b",
+          "eval_uncertainty_entropy": 0.38904432295692243,
+          "eval_routing_confidence": 0.823161671383217,
+          "eval_buffer_state": 0.28294132578685266
+        },
+        {
+          "input": "A train travels at 43 km/h for 3 hours and then 75 km/h for 2 hours. What is the total distance?",
+          "output": "279.00",
+          "metadata_difficulty": 0.2485580660782393,
+          "predict_quorum_sensing": "llama-3-8b",
+          "predict_static_llama": "llama-3-8b",
+          "predict_static_sonnet": "claude-3-5-sonnet",
+          "predict_centralized_router": "llama-3-8b",
+          "predict_independent_threshold": "llama-3-8b",
+          "predict_reflexive_baseline": "claude-3-5-sonnet",
+          "predict_hierarchical_baseline": "llama-3-8b",
+          "eval_uncertainty_entropy": 0.27341387268606326,
+          "eval_routing_confidence": 0.8757209669608803,
+          "eval_buffer_state": 0.2988464528625915
+        },
+        {
+          "input": "Solve for n: 4n + 11 = 446",
+          "output": "108.75",
+          "metadata_difficulty": 0.4159590873381714,
+          "predict_quorum_sensing": "claude-3-5-sonnet",
+          "predict_static_llama": "llama-3-8b",
+          "predict_static_sonnet": "claude-3-5-sonnet",
+          "predict_centralized_router": "llama-3-8b",
+          "predict_independent_threshold": "llama-3-8b",
+          "predict_reflexive_baseline": "llama-3-8b",
+          "predict_hierarchical_baseline": "llama-3-8b",
+          "eval_uncertainty_entropy": 0.4575549960719886,
+          "eval_routing_confidence": 0.7920204563309143,
+          "eval_buffer_state": 0.5327672698705371
+        }
+      ]
+    }
+  ]
+}

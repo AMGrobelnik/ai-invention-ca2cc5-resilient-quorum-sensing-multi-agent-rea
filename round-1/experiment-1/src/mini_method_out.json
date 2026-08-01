@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "experiment": "Quorum-Sensing Multi-Agent Reasoning Pareto Analysis",
+    "description": "Autoinduction recurrence routing with quorum quenching"
+  },
+  "datasets": [
+    {
+      "dataset": "reasoning_benchmark_gsm8k_subset",
+      "examples": [
+        {
+          "input": "If a store has 377 apples and sells 10 percent of them, how many apples remain?",
+          "output": "339.30",
+          "metadata_difficulty": 0.35367665723356584,
+          "predict_quorum_sensing": "llama-3-8b",
+          "predict_static_llama": "llama-3-8b",
+          "predict_static_sonnet": "claude-3-5-sonnet",
+          "predict_centralized_router": "llama-3-8b",
+          "predict_independent_threshold": "llama-3-8b",
+          "predict_reflexive_baseline": "claude-3-5-sonnet",
+          "predict_hierarchical_baseline": "llama-3-8b"
+        },
+        {
+          "input": "A train travels at 43 km/h for 3 hours and then 75 km/h for 2 hours. What is the total distance?",
+          "output": "279.00",
+          "metadata_difficulty": 0.2485580660782393,
+          "predict_quorum_sensing": "llama-3-8b",
+          "predict_static_llama": "llama-3-8b",
+          "predict_static_sonnet": "claude-3-5-sonnet",
+          "predict_centralized_router": "llama-3-8b",
+          "predict_independent_threshold": "llama-3-8b",
+          "predict_reflexive_baseline": "claude-3-5-sonnet",
+          "predict_hierarchical_baseline": "llama-3-8b"
+        },
+        {
+          "input": "Solve for n: 4n + 11 = 446",
+          "output": "108.75",
+          "metadata_difficulty": 0.4159590873381714,
+          "predict_quorum_sensing": "claude-3-5-sonnet",
+          "predict_static_llama": "llama-3-8b",
+          "predict_static_sonnet": "claude-3-5-sonnet",
+          "predict_centralized_router": "llama-3-8b",
+          "predict_independent_threshold": "llama-3-8b",
+          "predict_reflexive_baseline": "llama-3-8b",
+          "predict_hierarchical_baseline": "llama-3-8b"
+        }
+      ]
+    }
+  ]
+}

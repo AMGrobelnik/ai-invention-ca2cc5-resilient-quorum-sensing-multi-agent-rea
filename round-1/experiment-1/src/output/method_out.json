@@ -1,0 +1,65 @@
+{
+  "quorum_sensing": {
+    "mean_accuracy": 0.6340000000000001,
+    "std_accuracy": 0.046303347611160915,
+    "mean_cost": 0.02568400000000003,
+    "std_cost": 0.001294613455823789,
+    "mean_latency": 27724.0,
+    "std_latency": 396.6156829980378,
+    "mean_escalation_rate": 0.10799999999999998
+  },
+  "static_llama": {
+    "mean_accuracy": 0.604,
+    "std_accuracy": 0.04317406628984582,
+    "mean_cost": 0.006999999999999994,
+    "std_cost": 8.673617379884035e-19,
+    "mean_latency": 22000.0,
+    "std_latency": 0.0,
+    "mean_escalation_rate": 0.0
+  },
+  "static_sonnet": {
+    "mean_accuracy": 0.844,
+    "std_accuracy": 0.026532998322843195,
+    "mean_cost": 0.1799999999999998,
+    "std_cost": 0.0,
+    "mean_latency": 75000.0,
+    "std_latency": 0.0,
+    "mean_escalation_rate": 1.0
+  },
+  "centralized_router": {
+    "mean_accuracy": 0.626,
+    "std_accuracy": 0.04498888751680798,
+    "mean_cost": 0.02222400000000003,
+    "std_cost": 0.0020175093556164736,
+    "mean_latency": 26664.0,
+    "std_latency": 618.0809008536019,
+    "mean_escalation_rate": 0.08800000000000001
+  },
+  "independent_threshold": {
+    "mean_accuracy": 0.612,
+    "std_accuracy": 0.04354308211415452,
+    "mean_cost": 0.012536000000000025,
+    "std_cost": 0.0020175093556164835,
+    "mean_latency": 23696.0,
+    "std_latency": 618.0809008536019,
+    "mean_escalation_rate": 0.032
+  },
+  "reflexive_baseline": {
+    "mean_accuracy": 0.6980000000000001,
+    "std_accuracy": 0.022271057451320072,
+    "mean_cost": 0.07793000000000004,
+    "std_cost": 0.007339768388716348,
+    "mean_latency": 43730.0,
+    "std_latency": 2248.599564173221,
+    "mean_escalation_rate": 0.41
+  },
+  "hierarchical_baseline": {
+    "mean_accuracy": 0.6199999999999999,
+    "std_accuracy": 0.04604345773288536,
+    "mean_cost": 0.01876400000000003,
+    "std_cost": 0.0012946134558237806,
+    "mean_latency": 25604.0,
+    "std_latency": 396.6156829980378,
+    "mean_escalation_rate": 0.068
+  }
+}

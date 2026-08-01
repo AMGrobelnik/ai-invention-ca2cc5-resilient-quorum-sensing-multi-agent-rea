@@ -1,0 +1,29 @@
+{
+  "jitter_0.5": {
+    "final_mean_activation": 1.0,
+    "max_activation": 1.0,
+    "forecasting": {
+      "naive_mse": 0.0004424444975998454,
+      "ma_3pt_mse": 0.0017523952264717148,
+      "ma_beats_naive": false
+    }
+  },
+  "jitter_1.0": {
+    "final_mean_activation": 1.0,
+    "max_activation": 1.0,
+    "forecasting": {
+      "naive_mse": 0.0004007044192030643,
+      "ma_3pt_mse": 0.0016234747882432781,
+      "ma_beats_naive": false
+    }
+  },
+  "jitter_2.0": {
+    "final_mean_activation": 1.0,
+    "max_activation": 1.0,
+    "forecasting": {
+      "naive_mse": 0.0003403523132343232,
+      "ma_3pt_mse": 0.001501613170072791,
+      "ma_beats_naive": false
+    }
+  }
+}

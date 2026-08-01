@@ -1,0 +1,6 @@
+{
+  "series_length": 50,
+  "mse_naive": 0.048031798853949384,
+  "mse_3point_ma": 0.13706360678423554,
+  "naive_beats_ma": true
+}

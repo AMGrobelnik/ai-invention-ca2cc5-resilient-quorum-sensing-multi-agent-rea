@@ -1,0 +1,7 @@
+{
+  "series_length": 50,
+  "mse_naive": 32.095071532237476,
+  "mse_ma3": 39.04504940227321,
+  "naive_beats_ma3": true,
+  "explanation": "Naive last-value forecast outperforms 3-point moving average on high-frequency jitter because simple smoothing introduces phase lag during rapid latency fluctuations."
+}

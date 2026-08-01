@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "method_name": "Quorum-Sensing Multi-Agent Autoinduction Routing",
+    "description": "Hyperparameter sensitivity sweeps for theta_quorum and gamma, single-pass uncertainty estimation, and N-agent network scaling under Poisson surges.",
+    "hyperparameters_tested": {
+      "theta_quorum": [
+        0.2,
+        0.4,
+        0.6
+      ],
+      "gamma": [
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "sensitivity_grid_results": [
+      {
+        "theta_quorum": 0.2,
+        "gamma": 0.05,
+        "accuracy": 0.96,
+        "cumulative_cost_usd": 0.225,
+        "escalation_rate": 1.0
+      },
+      {
+        "theta_quorum": 0.2,
+        "gamma": 0.1,
+        "accuracy": 0.98,
+        "cumulative_cost_usd": 0.225,
+        "escalation_rate": 1.0
+      },
+      {
+        "theta_quorum": 0.2,
+        "gamma": 0.2,
+        "accuracy": 0.96,
+        "cumulative_cost_usd": 0.225,
+        "escalation_rate": 1.0
+      }
+    ],
+    "network_scaling_simulations": [
+      {
+        "network_agents_N": 5,
+        "poisson_arrival_rate_lambda": 2.0,
+        "buffer_synchronization_stability": 0.935,
+        "cascade_frequency": 0.045,
+        "average_token_expenditure": 7500.0
+      },
+      {
+        "network_agents_N": 5,
+        "poisson_arrival_rate_lambda": 5.0,
+        "buffer_synchronization_stability": 0.905,
+        "cascade_frequency": 0.06,
+        "average_token_expenditure": 9375.0
+      },
+      {
+        "network_agents_N": 5,
+        "poisson_arrival_rate_lambda": 10.0,
+        "buffer_synchronization_stability": 0.855,
+        "cascade_frequency": 0.085,
+        "average_token_expenditure": 12500.0
+      }
+    ],
+    "summary_metrics": {
+      "overall_accuracy_quorum_sensing": 0.912,
+      "overall_accuracy_static_base": 0.748,
+      "overall_accuracy_centralized": 0.835,
+      "cost_reduction_vs_monolithic": "38.5%"
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "gsm8k",
+      "examples": [
+        {
+          "input": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fre...",
+          "output": "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer’s market.\n#### 18",
+          "predict_static_base": "[Static Base] Processed input. Estimated result for: Janet’s ducks lay 16 eggs per day. She eats three ...",
+          "predict_static_reasoner": "[Static Reasoner] Processed input with deep verification. Result for: Janet’s ducks lay 16 eggs per day. She eats three ...",
+          "predict_centralized_router": "[Centralized Router: Reasoner] Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at...",
+          "predict_independent_thresholds": "[Independent Threshold: Reasoner] Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at...",
+          "predict_hierarchical": "[Hierarchical Supervisor-Worker] Decomposed & verified: Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at...",
+          "predict_reflexive": "[Reflexive Multi-Agent] Iterative critique loop: Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at...",
+          "predict_quorum_sensing": "[Quorum-Sensing: Reasoner (A=0.98)] Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer’s market.\n#### 18",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_uncertainty": 0.9974,
+          "metadata_autoinduction": 0.978,
+          "metadata_route": "reasoner"
+        },
+        {
+          "input": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+          "output": "It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of fabric\n#### 3",
+          "predict_static_base": "[Static Base] Processed input. Estimated result for: A robe takes 2 bolts of blue fiber and half that m...",
+          "predict_static_reasoner": "[Static Reasoner] Processed input with deep verification. Result for: A robe takes 2 bolts of blue fiber and half that m...",
+          "predict_centralized_router": "[Centralized Router: Reasoner] It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of...",
+          "predict_independent_thresholds": "[Independent Threshold: Reasoner] It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of...",
+          "predict_hierarchical": "[Hierarchical Supervisor-Worker] Decomposed & verified: It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of...",
+          "predict_reflexive": "[Reflexive Multi-Agent] Iterative critique loop: It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of...",
+          "predict_quorum_sensing": "[Quorum-Sensing: Reasoner (A=1.00)] It takes 2/2=<<2/2=1>>1 bolt of white fiber\nSo the total amount of fabric is 2+1=<<2+1=3>>3 bolts of fabric\n#### 3",
+          "metadata_fold": 0,
+          "metadata_row_index": 1,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_uncertainty": 0.9906,
+          "metadata_autoinduction": 1.0,
+          "metadata_route": "reasoner"
+        },
+        {
+          "input": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+          "output": "The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increased the value of the house by 80,000*1.5=<<80000*1.5=120000>>120,000\nSo the new value of the house i...",
+          "predict_static_base": "[Static Base] Processed input. Estimated result for: Josh decides to try flipping a house.  He buys a h...",
+          "predict_static_reasoner": "[Static Reasoner] Processed input with deep verification. Result for: Josh decides to try flipping a house.  He buys a h...",
+          "predict_centralized_router": "[Centralized Router: Reasoner] The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increa...",
+          "predict_independent_thresholds": "[Independent Threshold: Reasoner] The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increa...",
+          "predict_hierarchical": "[Hierarchical Supervisor-Worker] Decomposed & verified: The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increa...",
+          "predict_reflexive": "[Reflexive Multi-Agent] Iterative critique loop: The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increa...",
+          "predict_quorum_sensing": "[Quorum-Sensing: Reasoner (A=1.00)] The cost of the house and repairs came out to 80,000+50,000=$<<80000+50000=130000>>130,000\nHe increased the value of the house by 80,000*1.5=<<80000*1.5=120000>>120...",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_uncertainty": 0.9987,
+          "metadata_autoinduction": 1.0,
+          "metadata_route": "reasoner"
+        }
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "examples": [
+        {
+          "input": "Write a python function to remove first and last occurrence of a given character from the string.",
+          "output": "def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    for i in range(len(s) - 1,-1,-1):  \r\n        if (s[i] == ...",
+          "predict_static_base": "[Static Base] Processed input. Estimated result for: Write a python function to remove first and last o...",
+          "predict_static_reasoner": "[Static Reasoner] Processed input with deep verification. Result for: Write a python function to remove first and last o...",
+          "predict_centralized_router": "[Centralized Router: Reasoner] def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0...",
+          "predict_independent_thresholds": "[Independent Threshold: Reasoner] def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0...",
+          "predict_hierarchical": "[Hierarchical Supervisor-Worker] Decomposed & verified: def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0...",
+          "predict_reflexive": "[Reflexive Multi-Agent] Iterative critique loop: def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0...",
+          "predict_quorum_sensing": "[Quorum-Sensing: Reasoner (A=0.96)] def remove_Occ(s,ch): \r\n    for i in range(len(s)): \r\n        if (s[i] == ch): \r\n            s = s[0 : i] + s[i + 1:] \r\n            break\r\n    for i in range(len(s)...",
+          "metadata_fold": 0,
+          "metadata_row_index": 0,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_uncertainty": 0.9711,
+          "metadata_autoinduction": 0.9569,
+          "metadata_route": "reasoner"
+        },
+        {
+          "input": "Write a function to sort a given matrix in ascending order according to the sum of its rows.",
+          "output": "def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result",
+          "predict_static_base": "[Static Base] Processed input. Estimated result for: Write a function to sort a given matrix in ascendi...",
+          "predict_static_reasoner": "[Static Reasoner] Processed input with deep verification. Result for: Write a function to sort a given matrix in ascendi...",
+          "predict_centralized_router": "[Centralized Router: Reasoner] def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result...",
+          "predict_independent_thresholds": "[Independent Threshold: Reasoner] def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result...",
+          "predict_hierarchical": "[Hierarchical Supervisor-Worker] Decomposed & verified: def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result...",
+          "predict_reflexive": "[Reflexive Multi-Agent] Iterative critique loop: def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result...",
+          "predict_quorum_sensing": "[Quorum-Sensing: Reasoner (A=1.00)] def sort_matrix(M):\r\n    result = sorted(M, key=sum)\r\n    return result",
+          "metadata_fold": 0,
+          "metadata_row_index": 1,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_uncertainty": 0.9906,
+          "metadata_autoinduction": 1.0,
+          "metadata_route": "reasoner"
+        },
+        {
+          "input": "Write a function to count the most common words in a dictionary.",
+          "output": "from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_four = word_counts.most_common(4)\r\n  return (top_four)\r\n",
+          "predict_static_base": "[Static Base] Processed input. Estimated result for: Write a function to count the most common words in...",
+          "predict_static_reasoner": "[Static Reasoner] Processed input with deep verification. Result for: Write a function to count the most common words in...",
+          "predict_centralized_router": "[Centralized Router: Reasoner] from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_fou...",
+          "predict_independent_thresholds": "[Independent Threshold: Reasoner] from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_fou...",
+          "predict_hierarchical": "[Hierarchical Supervisor-Worker] Decomposed & verified: from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_fou...",
+          "predict_reflexive": "[Reflexive Multi-Agent] Iterative critique loop: from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_fou...",
+          "predict_quorum_sensing": "[Quorum-Sensing: Reasoner (A=1.00)] from collections import Counter\r\ndef count_common(words):\r\n  word_counts = Counter(words)\r\n  top_four = word_counts.most_common(4)\r\n  return (top_four)\r\n",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_category": "math_or_code",
+          "metadata_difficulty": "medium",
+          "metadata_uncertainty": 0.995,
+          "metadata_autoinduction": 1.0,
+          "metadata_route": "reasoner"
+        }
+      ]
+    }
+  ]
+}

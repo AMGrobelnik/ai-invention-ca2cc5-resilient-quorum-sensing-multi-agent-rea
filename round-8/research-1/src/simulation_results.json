@@ -1,0 +1,19 @@
+{
+  "n_steps": 100,
+  "spike_count": 5,
+  "mse": {
+    "naive_last_value": 285.1327,
+    "moving_average_3pt": 175.9612,
+    "ewma_alpha_035": 172.739
+  },
+  "mae": {
+    "naive_last_value": 11.2541,
+    "moving_average_3pt": 9.1298,
+    "ewma_alpha_035": 9.0565
+  },
+  "improvements_percent": {
+    "mse_reduction_3pt_vs_naive": 38.29,
+    "mae_reduction_3pt_vs_naive": 18.88
+  },
+  "conclusion": "3-point moving average outperforms naive last-value prediction by 38.29% MSE reduction on WAN telemetry simulation under stochastic jitter and congestion spikes."
+}
